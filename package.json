@@ -1,5 +1,5 @@
 {
-  "name": "code-exercise",
+  "name": "shopping",
   "version": "1.0.0",
   "description": "This is a shopping cart coding exercise",
   "main": "index.js",
@@ -7,9 +7,29 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "canned -p 5000 ./server"
   },
-  "author": "",
+  "author": "apeksha",
   "license": "MIT",
   "dependencies": {
-    "canned": "^0.3.12"
-  }
+    "canned": "^0.3.12",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "handlebars": "^4.5.3"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apesingh/shopping-cart-assignment.git"
+  },
+  "keywords": [
+    "shopping-cart-assignment"
+  ],
+  "bugs": {
+    "url": "https://github.com/apesingh/shopping-cart-assignment/issues"
+  },
+  "homepage": "https://github.com/apesingh/shopping-cart-assignment#readme"
 }

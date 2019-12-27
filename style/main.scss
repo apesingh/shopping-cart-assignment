@@ -1,0 +1,17 @@
+@import "header.scss";
+@import "login.scss" ;
+@import "home.scss";
+@import "products.scss";
+@import "cart.scss";
+footer {
+    background: $grey;
+    color: $darker-grey;
+    font-size: 90%;
+    font-weight: 400;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
