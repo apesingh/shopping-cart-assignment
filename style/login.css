@@ -1,19 +1,24 @@
 .login-wrapper {
-  padding: 0 176px;
-  display: flex; }
-  @media (max-width: 768px), (max-width: 600px) {
+  padding: 2px 10px; }
+  @media only screen and (min-width: 768px) {
     .login-wrapper {
       padding: 0; } }
   .login-wrapper .login-details {
+    width: 50%;
+    display: inline-block;
+    float: left;
     padding-right: 15px;
-    width: 58%;
     margin-top: 50px;
-    font: 600 14px dosis; }
+    font-weight: 600;
+    font-size: 100%; }
+  .login-wrapper .login-form {
+    width: 35%;
+    display: inline-block; }
   .login-wrapper .login-text {
     margin-top: 14px;
-    font: 400 13px dosis; }
-  .login-wrapper .login-form {
-    width: 50%; }
+    font-weight: 400;
+    font-size: 80%;
+    line-height: 130%; }
   .login-wrapper .form-input {
     margin: 40px 0;
     width: 100%; }

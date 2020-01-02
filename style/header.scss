@@ -3,11 +3,11 @@ html {
     background-color: $white;
     color: $darker-grey; 
     font-family: 'Lato', 'Arial', 'sans-serif';
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
-    @media (max-width: $breakpoint-phone), (max-width: $breakpoint-small-phone), (max-width: $breakpoint-small-phone) {
-            font-size: 18px;
+    @media only screen and (min-width: $breakpoint-phone) {
+        font-size: 20px ;
     }
     .row {
         max-width: 1140px;
@@ -16,107 +16,138 @@ html {
     section {
         padding: 80px 0;
     }
+    .clearfix {zoom:1}
+    .clearfix:after {
+        content: '.';
+        clear: both;
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
     .header-wrapper {
         border-bottom: 3px solid $grey;
-        .col .span-1-of-2 {
-            @media (max-width: $breakpoint-phone), (max-width: $breakpoint-small-phone), (max-width: $breakpoint-small-phone) {width: 49.2%;}
+        padding: 3px 5px 0 5px;
+        @media only screen and (min-width: $breakpoint-phone) {
+            padding: 0;
         }
-        @media (max-width: $breakpoint-phone), (max-width: $breakpoint-small-phone), (max-width: $breakpoint-small-phone) {
-            padding: 5px 0px;
-        }
-        .logo {
-            display: block;
-            width: 25%;
-            @media (max-width: $breakpoint-phone), (max-width: $breakpoint-small-phone), (max-width: $breakpoint-small-phone) {
-                width: 30%;
-            }
-            .logo-img {
-                height: auto;
+        nav {
+            width: 100%;
+            display: inline-block;
+            .left-nav {
+                width:65%;
+                display: inline-block;
                 float: left;
-                width: 100%;
-            }
-        }
-        .main-nav {
-            float: left;
-            list-style: none;
-            margin-top: 5%;
-            font-weight: 400;
-             @media (max-width: $breakpoint-phone), (max-width: $breakpoint-small-phone), (max-width: $breakpoint-small-phone){margin-top: 35px;}
-            li {
-                display: inline-block;
-                margin-left: 25px;
-                @media (max-width: $breakpoint-phone), (max-width: $breakpoint-small-phone), (max-width: $breakpoint-small-phone) {
-                    margin-left: 10px;
-                }
-            }
-            li a:link,
-            li a:visited {
-                padding: 8px 0;
-                text-decoration: none;
-                font-size: 70%;
-                border-bottom: 1px solid transparent;
-                -webkit-transition: border-bottom 0.2s;
-                transition: border-bottom 0.2s;
-            }
-
-            li a:hover,
-            li a:active {
-                border-bottom: 1px solid $orange;
-            }
-            @media (max-width: $breakpoint-phone), (max-width: $breakpoint-small-phone), (max-width: $breakpoint-small-phone) {
-                    margin: 20px 0;
-                    font-size: 85%;
-            }
-        }
-        .credentials-and-cart {
-            position: relative;
-            text-align: right;
-            .credentials-wrapper {
-                display: inline-block;
-                list-style: none;
-                font-weight: 400;
-                li {
+                .left-nav-logo {
+                    width:35%;
                     display: inline-block;
-                    margin-left: 25px;
-                    @media (max-width: $breakpoint-phone), (max-width: $breakpoint-small-phone), (max-width: $breakpoint-small-phone) {
-                        margin-left: 10px;
+                    float: left;
+                    .logo {
+                        display: inline-block;
+                        .logo-img {
+                            height: auto;
+                            width: 100%;
+                            @media only screen and (min-width: $breakpoint-phone) {
+                                padding: 5px;
+                            }
+                        }
                     }
                 }
-                li a:link,
-                li a:visited {
-                    padding: 8px 0;
-                    text-decoration: none;
-                    font-size: 70%;
-                    border-bottom: 1px solid transparent;
-                    -webkit-transition: border-bottom 0.2s;
-                    transition: border-bottom 0.2s;
+                .left-nav-main {
+                    width:65%;
+                    display: inline-block;
+                    float: left;
+                    margin-top: 30px;
+                    .main-nav {
+                        float: left;
+                        list-style: none;
+                        font-weight: 400;
+                        @media only screen and (min-width: $breakpoint-phone) {
+                            margin-top: 5%;
+                            font-size: 112%;
+                            font-weight: 400;
+                        }
+                        li {
+                            display: inline-block;
+                            margin-left: 15px;
+                            @media only screen and (min-width: $breakpoint-phone) {
+                                margin-left: 25px;
+                            }
+                        }
+                        li a:link,
+                        li a:visited {
+                            padding: 8px 0;
+                            text-decoration: none;
+                            font-size: 65%;
+                            border-bottom: 1px solid transparent;
+                            -webkit-transition: border-bottom 0.2s;
+                            transition: border-bottom 0.2s;
+                        }
+
+                        li a:hover,
+                        li a:active {
+                            border-bottom: 1px solid $orange;
+                        }
+                    }
                 }
-                li a:hover,
-                li a:active {
-                    border-bottom: 1px solid $orange;
-                }
-//                @media (max-width: $breakpoint-phone), (max-width: $breakpoint-small-phone), (max-width: $breakpoint-small-phone) {
-//                     width: 28%;
-//                }
             }
-            .cart-container {
-                background: $grey;
-                top: 37px;
-                min-height: 15px;
-                padding: 5px;
-                text-align: center;
-                font-size: 70%;
-                font-weight: 400;
-                width: 20%;
-                right: 0;
-                position: absolute;
-                @media (max-width: $breakpoint-phone), (max-width: $breakpoint-small-phone), (max-width: $breakpoint-small-phone) {
-                    //margin: 11px 0 0px 0;
-                    //float: right;
+            .right-nav {
+                width:35%;
+                display: inline-block;
+                text-align: right;
+                .credentials-wrapper {
+                    display: inline-block;
+                    list-style: none;
+                    font-weight: 400;
+                    @media only screen and (min-width: $breakpoint-phone) {
+                        padding-top: 10px;
+                        padding-right: 5px;
+                    }
+                    li {
+                        display: inline-block;
+                        margin-left: 10px;
+                        @media only screen and (min-width: $breakpoint-phone) {
+                            margin-left: 25px;
+                        }
+                    }
+                    li a:link,
+                    li a:visited {
+                        padding: 8px 0;
+                        text-decoration: none;
+                        width: 38%;
+                        top: 30px;
+                        font-size: 65%;
+                        border-bottom: 1px solid transparent;
+                        -webkit-transition: border-bottom 0.2s;
+                        transition: border-bottom 0.2s;
+                        @media only screen and (min-width: $breakpoint-phone) {
+                            font-size: 70%;
+                        }
+                    }
+                    li a:hover,
+                    li a:active {
+                        border-bottom: 1px solid $orange;
+                    }
                 }
-            }
-            .fa-shopping-cart {
-                color: $accent;
+                .cart-container {
+                    width: 100%;
+                    font-size: 60%;
+                    font-weight: 400;
+                    @media only screen and (min-width: $breakpoint-phone) {
+                        font-size: 70%;
+                        margin-top: 35px;
+                        margin-right: 5px;
+                        
+                    }
+                    a {
+                        background: $grey;
+                        padding: 5px;
+                        text-align: center;                       
+                        display: inline-block;
+                    }
+                }
+                .fa-shopping-cart {
+                    color: $accent;
+                }
             }
         }
     }

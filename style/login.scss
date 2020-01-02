@@ -1,22 +1,27 @@
 @import "variables.scss";
 .login-wrapper {
-	padding: 0 176px;
-	display: flex;
-	@media (max-width: $breakpoint-phone), (max-width: $breakpoint-small-phone) {
-		padding: 0;
-	}
+    padding: 2px 10px;
+    @media only screen and (min-width: $breakpoint-phone) {
+        padding: 0;
+    }
 	.login-details {
+        width:50%;
+        display: inline-block;
+        float: left;
 		padding-right: 15px;
-		width: 58%;
 		margin-top: 50px;
-		font: 600 14px dosis;
+		font-weight: 600;
+		font-size: 100%;
+	}
+    .login-form {
+		width:35%;
+        display: inline-block;
 	}
 	.login-text {
 		margin-top: 14px;
-		font: 400 13px dosis;
-	}
-	.login-form {
-		width: 50%;
+		font-weight: 400;
+		font-size: 80%;
+        line-height: 130%;
 	}
 	.form-input {
 		margin: 40px 0;

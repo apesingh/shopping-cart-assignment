@@ -1,23 +1,26 @@
 <section class="banner-wrapper">
-    <div class="home-slider">
-        <div class="home-slider-offers">
-            {{#each banners}}
-            <div class="mySlides fade">
-                <img class="image-width" src="{{this.bannerImageUrl}}"
-                    alt="{{this.bannerImageAlt}}">
-            </div>
-            {{/each}}
-            <button class="prev" onClick="plusSlides(-1)">prev</button>
-            <button class="next" id="next" onClick="plusSlides(1)">next</button>
-            <div class="dots">
+    <div class="row">
+        <div class="home-slider">
+            <div class="home-slider-offers">
                 {{#each banners}}
-                <span class="dot" onclick="currentSlide({{@index}})"></span>
+                <div class="mySlides fade">
+                    <img class="image-width" src="{{this.bannerImageUrl}}"
+                        alt="{{this.bannerImageAlt}}">
+                </div>
                 {{/each}}
-            </div>
+                <button class="prev" onClick="plusSlides(-1)">prev</button>
+                <button class="next" id="next" onClick="plusSlides(1)">next</button>
+                <div class="dots">
+                    {{#each banners}}
+                    <span class="dot" onclick="currentSlide({{@index}})"></span>
+                    {{/each}}
+                </div>
 
+            </div>
         </div>
     </div>
-    <div class="category-wrapper">
+    <div class="row">
+        <div class="category-wrapper">
         {{#each categories}}
             {{#if this.enabled}}
                  <section class="category-section">
@@ -32,5 +35,6 @@
                 </section>
             {{/if}}
         {{/each}}
+    </div>
     </div>
 </section>

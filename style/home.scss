@@ -1,12 +1,13 @@
 @import "variables.scss";
 .banner-wrapper{
-    padding: 5px 70px 0 70px;
+    /*padding: 5px 70px 0 70px;*/
     @media (max-width: $breakpoint-phone),(max-width: $breakpoint-small-phone),(max-width: $breakpoint-small-phone) {
         padding: 0px;
     }
     .image-width{
         width: 100%;
-        height:180px;
+        height:auto;
+        /*height:180px;*/
     }
     .home-slider{
         .home-slider-offers{
@@ -50,7 +51,10 @@
         right: 8px;
     }
     .category-section{
-        min-height: 150px;
+        min-height: 230px;
+        @media (max-width: $breakpoint-phone),(max-width: $breakpoint-small-phone),(max-width: $breakpoint-small-phone) {
+            min-height: 160px;
+        }
         padding: 10px;
         position: relative;
         &::after {
@@ -68,23 +72,31 @@
     .category{
         float: left;
         width: 30%;
+        margin: 0;
+        overflow: hidden;
         .category-image{
             width: 100%;
-            height: 120px;
+            /*height: 120px;*/
+            height: auto;
         }
     }
     .category-desc{
         float: right;
-        font: 400 12px Dosis;
         margin-top: 30px;
         text-align: center;
         width: 70%;
     }
     .category-heading{
-        font: 800 16px dosis;
+        font-weight: 800;
+        font-size: 100%;
+        word-spacing: 4px;
+        letter-spacing: 1px;
     }
     .category-text{
         margin-top: 15px;
+        font-weight: 400;
+        font-size: 70%;
+        line-height: 145%;
     }
     .button-align{
         margin-top: 15px;

@@ -41,9 +41,10 @@
     
     
     function buy(id, operation) {
-        var url = window.location.origin + "/cart/"+id+"/"+operation;
+        //var url = window.location.origin + "/addToCart/"+id+"/"+operation;
+        const url = window.location.origin + "/addToCart/"+id;
         let xmlHttpReq = new XMLHttpRequest();
-        xmlHttpReq.open("GET", url, true);
+        xmlHttpReq.open("POST", url, true);
         xmlHttpReq.onload = function () {
             if (xmlHttpReq.status == 200) {
                 let data = JSON.parse(xmlHttpReq.responseText);
@@ -52,6 +53,35 @@
         };
         xmlHttpReq.onerror = function () { };
         xmlHttpReq.send();
+        
+        
+        
+        
+        
+        
+        
+//  const url = `http://localhost:5000/addToCart`;
+//  fetch(url, {
+//  method: 'POST',
+//   headers: {
+//      'Accept': 'application/json',
+//      'Content-Type': 'application/json'
+//    },
+//  body: JSON.stringify({'id':id}),
+//  }).then(function(response) {
+//    if(response.status === 200) {
+//      itemCount++;
+//      document.getElementById("cartNumber").innerHTML=`${itemCount} items`;
+//      localStorage.setItem("itemCount",itemCount);
+//      itemList.push(id);
+//      localStorage.setItem("itemList",itemList);
+//      return response.json();
+//    }
+//  }).then((myJson) => {
+//    console.log(myJson);
+//  }); 
+ 
+
     }
     
     function addRemoveItem(id, index, price, task) {

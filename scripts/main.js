@@ -28,8 +28,9 @@ routing.get('/products', function(req, res,next){
 });
 routing.get('/products/:id', function (req, res, next) {
     var categoryId = req.params.id;
-    var ActiveCategories = categories.categories.filter(function(category){ return category.enabled});
-    var product_cat = products.products.filter(function(product){return product.category === categoryId});
+    var ActiveCategories = categories.filter(function(category){ return category.enabled});
+    console.log("ActiveCategories",ActiveCategories);
+    var product_cat = products.filter(function(product){return product.category === categoryId});
     res.render('products', {
         categories: ActiveCategories,
         products: product_cat,
