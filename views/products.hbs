@@ -1,12 +1,26 @@
 <section class="products-wrapper">
     <div class="row">
-        <ul class="categories-wrapper">
-            {{#each categories}}
-                {{#if this.enabled}}
-                    <li class="category-name"><a href="/products/{{this.id}}">{{this.name}}</a></li>
-                {{/if}}
-            {{/each}}
-        </ul>
+        <nav>
+            <ul class="categories-wrapper">
+                {{#each categories}}
+                    {{#if this.enabled}}
+                        <li class="category-name"><a href="/products/{{this.id}}">{{this.name}}</a></li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                   {{#each categories}}
+                        {{#if this.enabled}}
+                           <a href="/products/{{this.id}}">{{this.name}}</a>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div> 
+        </nav>
         <div class="product-wrapper">
             {{#each products}}
                 <div class="product position-rel">

@@ -11,7 +11,6 @@ let products = JSON.parse(productObj);
 categories.sort(function (a, b) {
     return a.order - b.order;
 });
-console.log("itemCounter-",itemCounter);
 routing.get('/', function (req, res, next) {
     res.render('home', {
         banners: banners,
@@ -29,7 +28,6 @@ routing.get('/products', function(req, res,next){
 routing.get('/products/:id', function (req, res, next) {
     var categoryId = req.params.id;
     var ActiveCategories = categories.filter(function(category){ return category.enabled});
-    console.log("ActiveCategories",ActiveCategories);
     var product_cat = products.filter(function(product){return product.category === categoryId});
     res.render('products', {
         categories: ActiveCategories,

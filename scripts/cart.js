@@ -1,13 +1,14 @@
-var express = require('express');
-var router = express.Router();
-
-var productList = require('../server/products/index.get.json');
-var productInCart = [];
-var itemCounter = require('./constant');
+let express = require('express');
+let router = express.Router();
+let fs = require('fs');
+let obj = fs.readFileSync('./server/products/index.get.json'); 
+let productList = JSON.parse(obj);
+let productInCart = [];
+let itemCounter = require('./constant');
 
 
 router.get('/', function (req, res, next) {
-  var productLists = productList.products.filter(function(category_list){category_list.category});
+  let productLists = productList.filter(function(category_list){category_list.category});
 
   res.render('cart', {
     title: 'cart',
@@ -22,21 +23,20 @@ router.get('/allitem', function (req, res) {
 });
 router.get('/:id/:operation', function (req, res) {
   if (req.params.operation == "add") {
-    productList.products.forEach(function(element) {
-      if (element.id === req.params.id) {
-        if (element.count == undefined) {
-          element.count = 1;
-          productInCart.push(element);
-          itemCounter.item_counter++;
-          element.total_price = element.price ;
-        } else {
-          element.count++;
-          itemCounter.item_counter++;
-          element.total_price = element.count * element.price;
-          
-        }
-      }
-    });
+      productList.forEach(function(element) {
+          if (element.id === req.params.id) {
+            if (element.count == undefined) {
+              element.count = 1;
+              productInCart.push(element);
+              itemCounter.item_counter++;
+              element.total_price = element.price ;
+            } else {
+              element.count++;
+              itemCounter.item_counter++;
+              element.total_price = element.count * element.price;
+            }
+          }
+   });
     res.end(JSON.stringify({ 'cartItems': productInCart, 'item_counter': itemCounter.item_counter }));
   } else if (req.params.operation == "remove") {
     productList.products.forEach(function(element) {

@@ -2,19 +2,34 @@
 html {
     background-color: $white;
     color: $darker-grey; 
-    font-family: 'Lato', 'Arial', 'sans-serif';
-    font-size: 18px;
-    font-weight: 300;
+    font: {
+        family: 'Lato', 'Arial', 'sans-serif';
+        size: $mobile-font-size;
+        weight: 300;
+    }
     text-rendering: optimizeLegibility;
     @media only screen and (min-width: $breakpoint-phone) {
-        font-size: 20px ;
+        font-size: $desktop-font-size ;
     }
     .row {
+        zoom: 1; /* For IE 6/7 (trigger hasLayout) */
         max-width: 1140px;
         margin: 0 auto;
     }
+
+    .row:before,
+    .row:after {
+        /* content:""; */
+        display:table;
+    }
+    .row:after {
+        clear:both;
+    }
     section {
-        padding: 80px 0;
+        @media only screen and (min-width: $breakpoint-phone) {
+           padding: 80px 0;
+        }
+        padding: 20px 0;
     }
     .clearfix {zoom:1}
     .clearfix:after {
@@ -56,15 +71,18 @@ html {
                     width:65%;
                     display: inline-block;
                     float: left;
-                    margin-top: 30px;
+                    margin-top: 15px;
+                    @media only screen and (min-width: $breakpoint-phone) {margin-top: 30px;}
                     .main-nav {
                         float: left;
                         list-style: none;
                         font-weight: 400;
                         @media only screen and (min-width: $breakpoint-phone) {
                             margin-top: 5%;
-                            font-size: 112%;
-                            font-weight: 400;
+                            font: {
+                                size: 112%;
+                                weight: 400;
+                            }
                         }
                         li {
                             display: inline-block;
@@ -130,8 +148,10 @@ html {
                 }
                 .cart-container {
                     width: 100%;
-                    font-size: 60%;
-                    font-weight: 400;
+                    font: {
+                        size: 60%;
+                        weight: 400;
+                    }
                     @media only screen and (min-width: $breakpoint-phone) {
                         font-size: 70%;
                         margin-top: 35px;

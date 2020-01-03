@@ -10,8 +10,10 @@
         float: left;
 		padding-right: 15px;
 		margin-top: 50px;
-		font-weight: 600;
-		font-size: 100%;
+		font: { 
+            weight: 600;
+            size: 100%;
+        }
 	}
     .login-form {
 		width:35%;
@@ -19,8 +21,10 @@
 	}
 	.login-text {
 		margin-top: 14px;
-		font-weight: 400;
-		font-size: 80%;
+        font: { 
+		  weight: 400;
+		  size: 80%;
+        }
         line-height: 130%;
 	}
 	.form-input {

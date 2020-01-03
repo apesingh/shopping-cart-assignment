@@ -1,5 +1,5 @@
     function request_server() {
-        var url = window.location.origin + "/cart/allitem";
+        const url = window.location.origin + "/cart/allitem";
         fetch(url)
             .then(function (response) {
                 return response.json();
@@ -25,7 +25,7 @@
     }
     
     function updateCheckoutAmount() {
-        var checkoutAccumulation = document.getElementsByClassName("total");
+        let checkoutAccumulation = document.getElementsByClassName("total");
         let totalCheckoutSpan = document.getElementById("totalCheckoutAmount");
         let totalCheckoutPrice = 0;
         for (let i = 0; i < checkoutAccumulation.length; i++) {
@@ -40,46 +40,15 @@
     }
     
     
-    function buy(id, operation) {
-        //var url = window.location.origin + "/addToCart/"+id+"/"+operation;
-        const url = window.location.origin + "/addToCart/"+id;
-        let xmlHttpReq = new XMLHttpRequest();
-        xmlHttpReq.open("POST", url, true);
-        xmlHttpReq.onload = function () {
-            if (xmlHttpReq.status == 200) {
-                let data = JSON.parse(xmlHttpReq.responseText);
-                updateCart(data.item_counter, data.cartItems);
-            } else { }
-        };
-        xmlHttpReq.onerror = function () { };
-        xmlHttpReq.send();
-        
-        
-        
-        
-        
-        
-        
-//  const url = `http://localhost:5000/addToCart`;
-//  fetch(url, {
-//  method: 'POST',
-//   headers: {
-//      'Accept': 'application/json',
-//      'Content-Type': 'application/json'
-//    },
-//  body: JSON.stringify({'id':id}),
-//  }).then(function(response) {
-//    if(response.status === 200) {
-//      itemCount++;
-//      document.getElementById("cartNumber").innerHTML=`${itemCount} items`;
-//      localStorage.setItem("itemCount",itemCount);
-//      itemList.push(id);
-//      localStorage.setItem("itemList",itemList);
-//      return response.json();
-//    }
-//  }).then((myJson) => {
-//    console.log(myJson);
-//  }); 
+    function buy(id, operation) {  
+        const url = window.location.origin + "/cart/"+id+"/"+operation;
+        fetch(url).then(function(response) {
+            if(response.status === 200) {
+                return response.json();
+            }
+        }).then((myJson) => {
+            updateCart(myJson.item_counter, myJson.cartItems);
+        }); 
  
 
     }
