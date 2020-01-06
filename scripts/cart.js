@@ -39,7 +39,7 @@ router.get('/:id/:operation', function (req, res) {
    });
     res.end(JSON.stringify({ 'cartItems': productInCart, 'item_counter': itemCounter.item_counter }));
   } else if (req.params.operation == "remove") {
-    productList.products.forEach(function(element) {
+    productList.forEach(function(element) {
       if (element.id === req.params.id) {
         element.count = element.count - 1;
         itemCounter.item_counter = itemCounter.item_counter - 1;

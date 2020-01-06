@@ -1,3 +1,30 @@
+/* Large devices (laptops/desktops, 961px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Large devices (laptops/desktops, 961px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+.disp-inline-block {
+  display: inline-block; }
+
+.position-rel {
+  position: relative; }
+
+.position-abs {
+  position: absolute; }
+
+.float-right {
+  float: right; }
+
+.text-right {
+  text-align: right; }
+
+.float-left {
+  float: left; }
+
+.display-none {
+  display: none; }
+
 .banner-wrapper .image-width {
   width: 100%;
   height: auto; }
@@ -103,9 +130,10 @@
   .banner-wrapper .category-wrapper .button-align {
     margin-top: 15px; }
   .banner-wrapper .category-wrapper .category-button {
-    background: #d10157;
-    border: #d10157;
+    background-color: #d10157;
     color: #fff;
+    padding: 5px;
+    border: 1px solid #d10157;
     cursor: pointer;
     padding: 7px; }
   .banner-wrapper .category-wrapper .filter {

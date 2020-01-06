@@ -1,3 +1,6 @@
+/* Large devices (laptops/desktops, 961px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
 .disp-inline-block {
   display: inline-block; }
 

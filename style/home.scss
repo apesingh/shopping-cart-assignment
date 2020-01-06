@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "helperClasses.scss";
 .banner-wrapper{
     .image-width{
         width: 100%;
@@ -125,10 +126,7 @@
             margin-top: 15px;
         }
         .category-button{
-            background: $accent;
-            border: $accent;
-            color: $white;
-            cursor: pointer;
+           @include button-design;
             padding: 7px;
         }
         .filter{

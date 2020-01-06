@@ -18,6 +18,7 @@ $input-height: 35px;
 $input-border-color: $dark-grey;
 
 $breakpoint-tablet-potrait: 1024px;
-$breakpoint-phone: 768px;
-$breakpoint-small-phone: 600px;
+$breakpoint-large-device: 961px;/* Large devices (laptops/desktops, 961px and up) */
+$breakpoint-phone: 768px;/* Medium devices (landscape tablets, 768px and up) */
+$breakpoint-small-phone: 600px;/* Small devices (portrait tablets and large phones, 600px and up) */
 $breakpoint-smaller-phone: 480px;

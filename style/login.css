@@ -1,3 +1,30 @@
+/* Large devices (laptops/desktops, 961px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Large devices (laptops/desktops, 961px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+.disp-inline-block {
+  display: inline-block; }
+
+.position-rel {
+  position: relative; }
+
+.position-abs {
+  position: absolute; }
+
+.float-right {
+  float: right; }
+
+.text-right {
+  text-align: right; }
+
+.float-left {
+  float: left; }
+
+.display-none {
+  display: none; }
+
 .login-wrapper {
   padding: 2px 10px; }
   @media only screen and (min-width: 768px) {
@@ -66,8 +93,10 @@
         color: #01d1c9; }
   .login-wrapper .form-button-large {
     background-color: #d10157;
-    border: none;
     color: #fff;
+    padding: 5px;
+    border: 1px solid #d10157;
+    cursor: pointer;
     text-align: center;
     text-decoration: none;
     display: inline-block;

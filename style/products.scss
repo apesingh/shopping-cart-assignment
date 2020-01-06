@@ -10,7 +10,7 @@
             float: left;
             width: 100%;
             overflow: hidden;
-            @media only screen and (min-width: $breakpoint-phone) {
+            @media only screen and (min-width: $breakpoint-large-device) {
                 display: none;
             }
             .dropbtn {
@@ -54,7 +54,7 @@
         
         .categories-wrapper{
             display: none;
-            @media only screen and (min-width: $breakpoint-phone) {
+            @media only screen and (min-width: $breakpoint-large-device) {
                 display: block;
             }
             background: $grey;
@@ -84,7 +84,7 @@
         width: 100%;
         margin-top: 20px;
         display: inline-block;
-        @media only screen and (min-width: $breakpoint-phone) {
+        @media only screen and (min-width: $breakpoint-large-device) {
             width: 75%;
             float: right;
         }
@@ -96,21 +96,24 @@
             size: 70%;
             weight: 600;           
         }
-        @media only screen and (min-width: $breakpoint-phone) {
+        @media only screen and (min-width: $breakpoint-large-device) {
             height: 60px;
         }
         //text-overflow: ellipsis;
         //white-space: nowrap;
     }
     .product{
-        //width: 45%;
         float: left;
         min-height: 200px;
         margin: 8px;
         border-bottom: 1px dashed;
         padding: 5px;
-        @media only screen and (min-width: $breakpoint-phone) {
+        @media only screen and (min-width: $breakpoint-large-device) {
             width: 20%;
+            min-height: 300px;
+        }
+        @media only screen and (min-width: 401px) and (max-width: 960px) {
+            width: 45%;
             min-height: 300px;
         }
     }
@@ -120,7 +123,7 @@
         height: 160px;
         top: 5%;
         right: -10px;
-        @media only screen and (min-width: $breakpoint-phone) {
+        @media only screen and (min-width: $breakpoint-large-device) {
             height: 234px;
         }
     }
@@ -128,7 +131,7 @@
         margin-top: 0px;
         width: 35%;
         display: inline-block;
-        @media only screen and (min-width: $breakpoint-phone) {
+        @media only screen and (min-width: $breakpoint-large-device) {
             margin-top: 15px;
             width: 75%;
             margin-left: auto;
@@ -136,7 +139,7 @@
         }
         .pro-img{
             width: 100%;
-            @media only screen and (min-width: $breakpoint-phone) {
+            @media only screen and (min-width: $breakpoint-large-device) {
                 width: 100%;
                 float: none;
             }
@@ -155,7 +158,7 @@
         margin-top: 0;
         position: absolute;
         display: inline-block;
-        @media only screen and (min-width: $breakpoint-phone) {
+        @media only screen and (min-width: $breakpoint-large-device) {
             width: 100%;
             margin-top: 5px;
             position: unset;
@@ -175,7 +178,7 @@
             text-align: center;
             width: 50%;
             display: none;
-            @media only screen and (min-width: $breakpoint-phone) {
+            @media only screen and (min-width: $breakpoint-large-device) {
                 display: block;
             }
         }
@@ -187,11 +190,11 @@
             .smaller-device{
                 display: inline;
                  color: $white;
-                @media only screen and (min-width: $breakpoint-phone) {
+                @media only screen and (min-width: $breakpoint-large-device) {
                     display: none;
                 }
             }
-            @media only screen and (min-width: $breakpoint-phone) {
+            @media only screen and (min-width: $breakpoint-large-device) {
                 width: 50%;
             }
         }
