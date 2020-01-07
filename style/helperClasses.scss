@@ -1,30 +1,55 @@
 @import "variables.scss";
-@mixin button-design {
-    background-color: $accent;
-    color: $white;
+
+/*------- MIXIN--------*/
+@mixin text-style($color, $weight:400) {
+    color: $color;
+    font-weight: $weight;
+}
+
+@mixin border-bottom($color, $width) {
+  border-bottom: $width solid $color;
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+//Padding mixin
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+//Margin mixin
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+
+/*------- EXTEND CLASSES--------*/
+.button-design {
+    background-color: color('buttoncolor');
+    color: color('white');
     padding: 5px;
-    border: 1px solid $accent;
+    border: 1px solid color('buttoncolor');
     cursor: pointer;
 }
 
-.disp-inline-block{
-    display: inline-block;
-}
-.position-rel{
-    position: relative;
-}
-.position-abs{
-    position: absolute;
-}
+
 .float-right{
     float: right;
-}
-.text-right{
-    text-align: right;
 }
 .float-left{
     float: left;
 }
-.display-none{
-    display: none;
-}
+

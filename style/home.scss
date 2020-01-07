@@ -22,13 +22,13 @@
         height: 6px;
         width: 6px;
         margin: 0 8px;
-        background-color: #bbb;
+        background-color: color('midgrey');
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;
         &.active,
         &:hover {
-          background-color: #717171;
+          background-color: color('darkergrey');
         }
     }
     .prev,.next{
@@ -37,20 +37,16 @@
         top: 42%;
         width: auto;
         padding: 5px;
-        color:$white;
+        color:color('white');
         transition: 0.6s ease;
         background-color: rgba(0, 0, 0, 0.2);
         text-transform: uppercase;
         border: none;
-        font: {
-            size: 70%;
-            weight: 700;
-        }
+        @include font-size(20px);
+        font-weight: 700;
         @media only screen and (min-width: $breakpoint-phone) {
-            font: {
-                size: 100%;
-                weight: 400;
-            }
+            font-weight: 400;
+            @include font-size(20px);
         }
     }
     .next{
@@ -72,7 +68,7 @@
                 top: 0px;
                 width: 60%;
                 height: 5px;
-                background: $dark-grey;
+                background: color('darkgrey');
                 border-radius: 290px / 8px;
                 transform: translate(-50%, -50%);
             }
@@ -104,14 +100,12 @@
             }
         }
         .category-heading{
-            font: {
-                weight: 800;
-                size: 90%;
-            }
+            font-weight: 800;
+            @include font-size(18px);
             word-spacing: 4px;
             letter-spacing: 1px;
             @media only screen and (min-width: $breakpoint-phone) {
-                font-size: 100%;
+                @include font-size(20px);
             }
         }
         .category-text{
@@ -126,11 +120,11 @@
             margin-top: 15px;
         }
         .category-button{
-           @include button-design;
+            @extend .button-design;
             padding: 7px;
         }
         .filter{
-            color: $white;
+            color: color('white');
         }
     }
     section:nth-child(even){

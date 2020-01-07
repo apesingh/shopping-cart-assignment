@@ -1,23 +1,17 @@
 /* Large devices (laptops/desktops, 961px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
-.disp-inline-block {
-  display: inline-block; }
-
-.position-rel {
-  position: relative; }
-
-.position-abs {
-  position: absolute; }
+/*------- MIXIN--------*/
+/*------- EXTEND CLASSES--------*/
+.button-design {
+  background-color: #d10157;
+  color: #FFFFFF;
+  padding: 5px;
+  border: 1px solid #d10157;
+  cursor: pointer; }
 
 .float-right {
   float: right; }
 
-.text-right {
-  text-align: right; }
-
 .float-left {
   float: left; }
-
-.display-none {
-  display: none; }

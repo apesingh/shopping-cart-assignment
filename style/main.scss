@@ -5,15 +5,13 @@
 @import "cart.scss";
 footer {
     margin-top: 20px;
-    background: $grey;
-    color: $darker-grey;
+    background: color('grey');
     display: block;
     width: 100%;
-    text-align: center;
     padding: 10px 0;
-    font-size: 80%;
-    font-weight: 400;
-//    position: fixed;
-//    left: 0;
-//    bottom: 0;
+    @include font-size(11px);
+    color: color('darkergrey');
+    .row{
+        text-align: left;
+    }
   }

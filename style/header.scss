@@ -1,7 +1,9 @@
 @import "variables.scss";
+@import "helperClasses.scss";
+
 html {
-    background-color: $white;
-    color: $darker-grey; 
+    background-color: color('white');
+    color: color('darkergrey'); 
     font: {
         family: 'Lato', 'Arial', 'sans-serif';
         size: $mobile-font-size;
@@ -31,58 +33,39 @@ html {
         }
         padding: 20px 0;
     }
-    .clearfix {zoom:1}
-    .clearfix:after {
-        content: '.';
-        clear: both;
-        display: block;
-        height: 0;
-        visibility: hidden;
-    }
+    
     .header-wrapper {
-        border-bottom: 3px solid $grey;
+        @include border-bottom(3px, color('grey')); 
         padding: 3px 5px 0 5px;
         @media only screen and (min-width: $breakpoint-phone) {
             padding: 0;
         }
+        .row {position: relative;}
         nav {
             width: 100%;
             display: inline-block;
-            .left-nav {
-                width:65%;
+            .brand-logo {
+                width:15%;
                 display: inline-block;
                 float: left;
-                .left-nav-logo {
-                    width:35%;
-                    display: inline-block;
-                    float: left;
-                    .logo {
-                        display: inline-block;
-                        .logo-img {
-                            height: auto;
-                            width: 100%;
-                            @media only screen and (min-width: $breakpoint-phone) {
-                                padding: 5px;
-                            }
-                        }
-                    }
+                .logo-img {
+                    height: auto;
+                    width: 100%;
+                    padding: 10px;
                 }
-                .left-nav-main {
-                    width:65%;
-                    display: inline-block;
-                    float: left;
-                    margin-top: 15px;
-                    @media only screen and (min-width: $breakpoint-phone) {margin-top: 30px;}
+            }
+            .nav-bar {
+                    width:25%;
+                    display: inline-block;  
+                    margin-left: 10%;
+                    //@media only screen and (min-width: $breakpoint-phone) {margin-top: 30px;}
                     .main-nav {
                         float: left;
                         list-style: none;
-                        font-weight: 400;
+                        @include font-size(12.5px);
+                        @include text-style(color('darkgrey'), 400);
                         @media only screen and (min-width: $breakpoint-phone) {
-                            margin-top: 5%;
-                            font: {
-                                size: 112%;
-                                weight: 400;
-                            }
+                            margin-top: 22%;
                         }
                         li {
                             display: inline-block;
@@ -91,83 +74,52 @@ html {
                                 margin-left: 25px;
                             }
                         }
+                        li:nth-last-child(2) {
+                            position: absolute;
+                            top: 10px;
+                            right: 4rem;
+                        }
+                        li:last-child {
+                            position: absolute;
+                            top: 10px;
+                            right: 0;
+                        }
                         li a:link,
                         li a:visited {
                             padding: 8px 0;
                             text-decoration: none;
-                            font-size: 65%;
-                            border-bottom: 1px solid transparent;
+                            @include border-bottom(1px, transparent); 
+                           
                             -webkit-transition: border-bottom 0.2s;
                             transition: border-bottom 0.2s;
                         }
 
                         li a:hover,
                         li a:active {
-                            border-bottom: 1px solid $orange;
+                            @include border-bottom(1px, color('orange')); 
                         }
                     }
-                }
             }
-            .right-nav {
-                width:35%;
+            .cart-container {
+                width: 30%;
                 display: inline-block;
                 text-align: right;
-                .credentials-wrapper {
+                float: right;
+                @include font-size(11.5px);
+                @include text-style(color('darkgrey'), 400);
+                @media only screen and (min-width: $breakpoint-phone) {
+                    margin-top: 4%;
+
+                }
+                a {
+                    background: color('grey');
+                    padding: 14px 24px;
+                    text-align: center;                       
                     display: inline-block;
-                    list-style: none;
-                    font-weight: 400;
-                    @media only screen and (min-width: $breakpoint-phone) {
-                        padding-top: 10px;
-                        padding-right: 5px;
-                    }
-                    li {
-                        display: inline-block;
-                        margin-left: 10px;
-                        @media only screen and (min-width: $breakpoint-phone) {
-                            margin-left: 25px;
-                        }
-                    }
-                    li a:link,
-                    li a:visited {
-                        padding: 8px 0;
-                        text-decoration: none;
-                        width: 38%;
-                        top: 30px;
-                        font-size: 65%;
-                        border-bottom: 1px solid transparent;
-                        -webkit-transition: border-bottom 0.2s;
-                        transition: border-bottom 0.2s;
-                        @media only screen and (min-width: $breakpoint-phone) {
-                            font-size: 70%;
-                        }
-                    }
-                    li a:hover,
-                    li a:active {
-                        border-bottom: 1px solid $orange;
-                    }
                 }
-                .cart-container {
-                    width: 100%;
-                    font: {
-                        size: 60%;
-                        weight: 400;
-                    }
-                    @media only screen and (min-width: $breakpoint-phone) {
-                        font-size: 70%;
-                        margin-top: 35px;
-                        margin-right: 5px;
-                        
-                    }
-                    a {
-                        background: $grey;
-                        padding: 5px;
-                        text-align: center;                       
-                        display: inline-block;
-                    }
-                }
-                .fa-shopping-cart {
-                    color: $accent;
-                }
+            }
+            .fa-shopping-cart {
+                color: color('buttoncolor');
             }
         }
     }

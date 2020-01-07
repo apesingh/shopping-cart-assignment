@@ -4,26 +4,20 @@
 /* Large devices (laptops/desktops, 961px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
-.disp-inline-block {
-  display: inline-block; }
-
-.position-rel {
-  position: relative; }
-
-.position-abs {
-  position: absolute; }
+/*------- MIXIN--------*/
+/*------- EXTEND CLASSES--------*/
+.button-design, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
+  background-color: #d10157;
+  color: #FFFFFF;
+  padding: 5px;
+  border: 1px solid #d10157;
+  cursor: pointer; }
 
 .float-right {
   float: right; }
 
-.text-right {
-  text-align: right; }
-
 .float-left {
   float: left; }
-
-.display-none {
-  display: none; }
 
 .cart-wrapper {
   background: rgba(238, 238, 238, 0.867);
@@ -35,7 +29,7 @@
       margin-right: auto; } }
   .cart-wrapper .my-cart {
     background: black;
-    color: #fff;
+    color: #FFFFFF;
     padding: 10px; }
   .cart-wrapper .cart-items {
     display: inline-block;
@@ -44,7 +38,7 @@
     min-height: 100px;
     margin-top: 10px;
     display: flex;
-    background: #fff; }
+    background: #FFFFFF; }
   .cart-wrapper .item-img {
     width: 25%;
     display: inline-block; }
@@ -59,33 +53,32 @@
     width: 65%;
     display: inline-block; }
     .cart-wrapper .items h4 {
-      font-size: 75%;
-      font-weight: 600; }
+      font-weight: 600;
+      font-size: 13.5px;
+      font-size: 0.84375rem; }
       @media only screen and (min-width: 768px) {
         .cart-wrapper .items h4 {
-          font-size: 95%; } }
+          font-size: 19px;
+          font-size: 1.1875rem; } }
   .cart-wrapper .item-total {
     width: 30%;
     display: inline-block;
     text-align: right;
     position: absolute;
     right: 5px;
-    font-size: 60%;
-    font-weight: 400; }
+    font-weight: 400;
+    font-size: 18px;
+    font-size: 1.125rem; }
     @media only screen and (min-width: 768px) {
       .cart-wrapper .item-total {
         position: unset;
         right: 0; } }
   .cart-wrapper .item-button {
     margin-top: 17px;
-    font-size: 60%;
-    font-weight: 400; }
+    font-weight: 400;
+    font-size: 18px;
+    font-size: 1.125rem; }
   .cart-wrapper .btn {
-    background-color: #d10157;
-    color: #fff;
-    padding: 5px;
-    border: 1px solid #d10157;
-    cursor: pointer;
     border-radius: 4px;
     width: 25px;
     padding: 0; }
@@ -95,7 +88,7 @@
     width: 40px; }
   .cart-wrapper .product-offer {
     margin: 10px auto;
-    background: #fff;
+    background: #FFFFFF;
     display: flex;
     padding: 5px;
     width: 92%; }
@@ -111,24 +104,21 @@
       float: right;
       width: 50%;
       padding: 10px;
-      font-size: 75%;
-      font-weight: 400; }
+      font-weight: 400;
+      font-size: 15px;
+      font-size: 0.9375rem; }
       @media only screen and (min-width: 768px) {
         .cart-wrapper .product-offer .offer-heading {
           padding: 15px 10px;
-          font-size: 90%;
+          font-size: 19px;
+          font-size: 1.1875rem;
           font-weight: 300; } }
   .cart-wrapper .checkout {
     margin-top: 60px;
     min-height: 100px;
-    background: #fff;
+    background: #FFFFFF;
     padding: 10px; }
     .cart-wrapper .checkout .btn-checkout {
-      background-color: #d10157;
-      color: #fff;
-      padding: 5px;
-      border: 1px solid #d10157;
-      cursor: pointer;
       width: 100%;
       height: 40px;
       padding: 13px;
@@ -136,26 +126,24 @@
       margin-top: 18px; }
     .cart-wrapper .checkout p {
       text-align: center;
-      font-size: 85%;
-      font-weight: 400; }
+      font-weight: 400;
+      font-size: 17px;
+      font-size: 1.0625rem; }
   .cart-wrapper .font-color {
-    color: #fff; }
+    color: #FFFFFF; }
   .cart-wrapper .cart-exception {
-    background: #fff;
+    background: #FFFFFF;
     min-height: 350px;
     text-align: center;
     font-size: 27px;
+    font-size: 1.6875rem;
     padding-top: 20%; }
     .cart-wrapper .cart-exception .helper-text {
       font-size: 19px;
+      font-size: 1.1875rem;
       margin-top: 10px;
       color: #847777; }
     .cart-wrapper .cart-exception .btn-start {
-      background-color: #d10157;
-      color: #fff;
-      padding: 5px;
-      border: 1px solid #d10157;
-      cursor: pointer;
       width: 100%;
       height: 40px;
       padding: 13px;

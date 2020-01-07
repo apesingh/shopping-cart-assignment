@@ -4,26 +4,20 @@
 /* Large devices (laptops/desktops, 961px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
-.disp-inline-block {
-  display: inline-block; }
-
-.position-rel {
-  position: relative; }
-
-.position-abs {
-  position: absolute; }
+/*------- MIXIN--------*/
+/*------- EXTEND CLASSES--------*/
+.button-design, .banner-wrapper .category-wrapper .category-button {
+  background-color: #d10157;
+  color: #FFFFFF;
+  padding: 5px;
+  border: 1px solid #d10157;
+  cursor: pointer; }
 
 .float-right {
   float: right; }
 
-.text-right {
-  text-align: right; }
-
 .float-left {
   float: left; }
-
-.display-none {
-  display: none; }
 
 .banner-wrapper .image-width {
   width: 100%;
@@ -44,12 +38,12 @@
   height: 6px;
   width: 6px;
   margin: 0 8px;
-  background-color: #bbb;
+  background-color: #D8DCE3;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease; }
   .banner-wrapper .dot.active, .banner-wrapper .dot:hover {
-    background-color: #717171; }
+    background-color: #6B6B6B; }
 
 .banner-wrapper .prev, .banner-wrapper .next {
   cursor: pointer;
@@ -57,17 +51,19 @@
   top: 42%;
   width: auto;
   padding: 5px;
-  color: #fff;
+  color: #FFFFFF;
   transition: 0.6s ease;
   background-color: rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   border: none;
-  font-size: 70%;
+  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700; }
   @media only screen and (min-width: 768px) {
     .banner-wrapper .prev, .banner-wrapper .next {
-      font-size: 100%;
-      font-weight: 400; } }
+      font-weight: 400;
+      font-size: 20px;
+      font-size: 1.25rem; } }
 
 .banner-wrapper .next {
   right: 8px; }
@@ -116,12 +112,14 @@
         width: 70%; } }
   .banner-wrapper .category-wrapper .category-heading {
     font-weight: 800;
-    font-size: 90%;
+    font-size: 18px;
+    font-size: 1.125rem;
     word-spacing: 4px;
     letter-spacing: 1px; }
     @media only screen and (min-width: 768px) {
       .banner-wrapper .category-wrapper .category-heading {
-        font-size: 100%; } }
+        font-size: 20px;
+        font-size: 1.25rem; } }
   .banner-wrapper .category-wrapper .category-text {
     margin-top: 15px;
     font-weight: 400;
@@ -130,14 +128,9 @@
   .banner-wrapper .category-wrapper .button-align {
     margin-top: 15px; }
   .banner-wrapper .category-wrapper .category-button {
-    background-color: #d10157;
-    color: #fff;
-    padding: 5px;
-    border: 1px solid #d10157;
-    cursor: pointer;
     padding: 7px; }
   .banner-wrapper .category-wrapper .filter {
-    color: #fff; }
+    color: #FFFFFF; }
 
 .banner-wrapper section:nth-child(even) .category {
   float: right;

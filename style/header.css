@@ -1,9 +1,27 @@
 /* Large devices (laptops/desktops, 961px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
+/* Large devices (laptops/desktops, 961px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*------- MIXIN--------*/
+/*------- EXTEND CLASSES--------*/
+.button-design {
+  background-color: #d10157;
+  color: #FFFFFF;
+  padding: 5px;
+  border: 1px solid #d10157;
+  cursor: pointer; }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
 html {
-  background-color: #fff;
-  color: #6b6b6b;
+  background-color: #FFFFFF;
+  color: #6B6B6B;
   font-family: 'Lato', 'Arial', 'sans-serif';
   font-size: 18px;
   font-weight: 300;
@@ -36,112 +54,78 @@ html {
     height: 0;
     visibility: hidden; }
   html .header-wrapper {
-    border-bottom: 3px solid rgba(238, 238, 238, 0.867);
+    border-bottom: rgba(238, 238, 238, 0.867) solid 3px;
     padding: 3px 5px 0 5px; }
     @media only screen and (min-width: 768px) {
       html .header-wrapper {
         padding: 0; } }
+    html .header-wrapper .row {
+      position: relative; }
     html .header-wrapper nav {
       width: 100%;
       display: inline-block; }
-      html .header-wrapper nav .left-nav {
-        width: 65%;
+      html .header-wrapper nav .brand-logo {
+        width: 15%;
         display: inline-block;
         float: left; }
-        html .header-wrapper nav .left-nav .left-nav-logo {
-          width: 35%;
-          display: inline-block;
-          float: left; }
-          html .header-wrapper nav .left-nav .left-nav-logo .logo {
-            display: inline-block; }
-            html .header-wrapper nav .left-nav .left-nav-logo .logo .logo-img {
-              height: auto;
-              width: 100%; }
-              @media only screen and (min-width: 768px) {
-                html .header-wrapper nav .left-nav .left-nav-logo .logo .logo-img {
-                  padding: 5px; } }
-        html .header-wrapper nav .left-nav .left-nav-main {
-          width: 65%;
-          display: inline-block;
-          float: left;
-          margin-top: 15px; }
-          @media only screen and (min-width: 768px) {
-            html .header-wrapper nav .left-nav .left-nav-main {
-              margin-top: 30px; } }
-          html .header-wrapper nav .left-nav .left-nav-main .main-nav {
-            float: left;
-            list-style: none;
-            font-weight: 400; }
-            @media only screen and (min-width: 768px) {
-              html .header-wrapper nav .left-nav .left-nav-main .main-nav {
-                margin-top: 5%;
-                font-size: 112%;
-                font-weight: 400; } }
-            html .header-wrapper nav .left-nav .left-nav-main .main-nav li {
-              display: inline-block;
-              margin-left: 15px; }
-              @media only screen and (min-width: 768px) {
-                html .header-wrapper nav .left-nav .left-nav-main .main-nav li {
-                  margin-left: 25px; } }
-            html .header-wrapper nav .left-nav .left-nav-main .main-nav li a:link,
-            html .header-wrapper nav .left-nav .left-nav-main .main-nav li a:visited {
-              padding: 8px 0;
-              text-decoration: none;
-              font-size: 65%;
-              border-bottom: 1px solid transparent;
-              -webkit-transition: border-bottom 0.2s;
-              transition: border-bottom 0.2s; }
-            html .header-wrapper nav .left-nav .left-nav-main .main-nav li a:hover,
-            html .header-wrapper nav .left-nav .left-nav-main .main-nav li a:active {
-              border-bottom: 1px solid #e67e22; }
-      html .header-wrapper nav .right-nav {
-        width: 35%;
+        html .header-wrapper nav .brand-logo .logo-img {
+          height: auto;
+          width: 100%;
+          padding: 10px; }
+      html .header-wrapper nav .nav-bar {
+        width: 25%;
         display: inline-block;
-        text-align: right; }
-        html .header-wrapper nav .right-nav .credentials-wrapper {
-          display: inline-block;
+        margin-left: 10%; }
+        html .header-wrapper nav .nav-bar .main-nav {
+          float: left;
           list-style: none;
+          font-size: 12.5px;
+          font-size: 0.78125rem;
+          color: #eeeeee;
           font-weight: 400; }
           @media only screen and (min-width: 768px) {
-            html .header-wrapper nav .right-nav .credentials-wrapper {
-              padding-top: 10px;
-              padding-right: 5px; } }
-          html .header-wrapper nav .right-nav .credentials-wrapper li {
+            html .header-wrapper nav .nav-bar .main-nav {
+              margin-top: 22%; } }
+          html .header-wrapper nav .nav-bar .main-nav li {
             display: inline-block;
-            margin-left: 10px; }
+            margin-left: 15px; }
             @media only screen and (min-width: 768px) {
-              html .header-wrapper nav .right-nav .credentials-wrapper li {
+              html .header-wrapper nav .nav-bar .main-nav li {
                 margin-left: 25px; } }
-          html .header-wrapper nav .right-nav .credentials-wrapper li a:link,
-          html .header-wrapper nav .right-nav .credentials-wrapper li a:visited {
+          html .header-wrapper nav .nav-bar .main-nav li:nth-last-child(2) {
+            position: absolute;
+            top: 10px;
+            right: 4rem; }
+          html .header-wrapper nav .nav-bar .main-nav li:last-child {
+            position: absolute;
+            top: 10px;
+            right: 0; }
+          html .header-wrapper nav .nav-bar .main-nav li a:link,
+          html .header-wrapper nav .nav-bar .main-nav li a:visited {
             padding: 8px 0;
             text-decoration: none;
-            width: 38%;
-            top: 30px;
-            font-size: 65%;
-            border-bottom: 1px solid transparent;
+            border-bottom: transparent solid 1px;
             -webkit-transition: border-bottom 0.2s;
             transition: border-bottom 0.2s; }
-            @media only screen and (min-width: 768px) {
-              html .header-wrapper nav .right-nav .credentials-wrapper li a:link,
-              html .header-wrapper nav .right-nav .credentials-wrapper li a:visited {
-                font-size: 70%; } }
-          html .header-wrapper nav .right-nav .credentials-wrapper li a:hover,
-          html .header-wrapper nav .right-nav .credentials-wrapper li a:active {
-            border-bottom: 1px solid #e67e22; }
-        html .header-wrapper nav .right-nav .cart-container {
-          width: 100%;
-          font-size: 60%;
-          font-weight: 400; }
-          @media only screen and (min-width: 768px) {
-            html .header-wrapper nav .right-nav .cart-container {
-              font-size: 70%;
-              margin-top: 35px;
-              margin-right: 5px; } }
-          html .header-wrapper nav .right-nav .cart-container a {
-            background: rgba(238, 238, 238, 0.867);
-            padding: 5px;
-            text-align: center;
-            display: inline-block; }
-        html .header-wrapper nav .right-nav .fa-shopping-cart {
-          color: #d10157; }
+          html .header-wrapper nav .nav-bar .main-nav li a:hover,
+          html .header-wrapper nav .nav-bar .main-nav li a:active {
+            border-bottom: #E67E22 solid 1px; }
+      html .header-wrapper nav .cart-container {
+        width: 30%;
+        display: inline-block;
+        text-align: right;
+        float: right;
+        font-size: 11.5px;
+        font-size: 0.71875rem;
+        color: #eeeeee;
+        font-weight: 400; }
+        @media only screen and (min-width: 768px) {
+          html .header-wrapper nav .cart-container {
+            margin-top: 4%; } }
+        html .header-wrapper nav .cart-container a {
+          background: rgba(238, 238, 238, 0.867);
+          padding: 14px 24px;
+          text-align: center;
+          display: inline-block; }
+      html .header-wrapper nav .fa-shopping-cart {
+        color: #d10157; }

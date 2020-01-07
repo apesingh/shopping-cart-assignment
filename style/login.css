@@ -4,26 +4,20 @@
 /* Large devices (laptops/desktops, 961px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
-.disp-inline-block {
-  display: inline-block; }
-
-.position-rel {
-  position: relative; }
-
-.position-abs {
-  position: absolute; }
+/*------- MIXIN--------*/
+/*------- EXTEND CLASSES--------*/
+.button-design, .login-wrapper .form-button-large {
+  background-color: #d10157;
+  color: #FFFFFF;
+  padding: 5px;
+  border: 1px solid #d10157;
+  cursor: pointer; }
 
 .float-right {
   float: right; }
 
-.text-right {
-  text-align: right; }
-
 .float-left {
   float: left; }
-
-.display-none {
-  display: none; }
 
 .login-wrapper {
   padding: 2px 10px; }
@@ -37,14 +31,16 @@
     padding-right: 15px;
     margin-top: 50px;
     font-weight: 600;
-    font-size: 100%; }
+    font-size: 18px;
+    font-size: 1.125rem; }
   .login-wrapper .login-form {
     width: 35%;
     display: inline-block; }
   .login-wrapper .login-text {
     margin-top: 14px;
     font-weight: 400;
-    font-size: 80%;
+    font-size: 14.5px;
+    font-size: 0.90625rem;
     line-height: 130%; }
   .login-wrapper .form-input {
     margin: 40px 0;
@@ -59,7 +55,7 @@
       display: block;
       top: 25.5px;
       z-index: 2;
-      color: #01d1c9;
+      color: #01D1C9;
       font-size: 16px;
       transition: all 200ms ease-in-out;
       width: 100%;
@@ -90,13 +86,8 @@
         top: 0;
         cursor: inherit;
         font-size: 14px;
-        color: #01d1c9; }
+        color: #01D1C9; }
   .login-wrapper .form-button-large {
-    background-color: #d10157;
-    color: #fff;
-    padding: 5px;
-    border: 1px solid #d10157;
-    cursor: pointer;
     text-align: center;
     text-decoration: none;
     display: inline-block;

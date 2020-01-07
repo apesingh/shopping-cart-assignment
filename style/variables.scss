@@ -1,21 +1,43 @@
-$accent: rgba(209, 1, 87, 1);
-$accent_onclick: rgb(150, 2, 64);
-$grey: rgba(238, 238, 238, 0.867);
-$dark-grey: rgba(238, 238, 238, 1);
-$darker-grey: rgb(107, 107, 107);
-$white : #fff;
-$highlight-color: #01d1c9;
-$orange: #e67e22;
+$theme-colors: (
+    'grey'              : rgba(238, 238, 238, 0.867),
+    'darkgrey'          : rgba(238, 238, 238, 1),
+    'darkergrey'        : #6B6B6B,
+    'midgrey'           : #D8DCE3,
+    'orange'            : #E67E22,
+    'buttoncolor'       : rgba(209, 1, 87, 1),
+    'buttononclick'     : rgb(150, 2, 64),
+    'highlightcolor'    : #01D1C9,
+    'white'     : #FFFFFF,
+    'black'     : #000000,
+    'error'     : #DF4036,
+    'caution'   : #F09924,
+    'success'   : #69BC36
+);
+
+/// The primary function for
+/// accessing colors in your palette
+@function color($color, $source: $theme-colors) {
+    @if map-has-key($source, $color) {
+        $key: map-get($source, $color);
+        @return $key;
+    } @else {
+        @error "ERROR: Specified color variant does not exist in the mapping";
+    }
+}
+
 $mobile-font-size: 18px;
 $desktop-font-size: 20px;
-$placeholder-padding: 8px;
+
 $placeholder-font-size: 16px;
 $placeholder-font-size-small: 14px;
+$placeholder-padding: 8px;
 $placeholder-transition: 200ms ease-in-out;
+
 $input-font-size: 16px;
 $input-top: 15px;
 $input-height: 35px;
-$input-border-color: $dark-grey;
+
+//$input-border-color: $dark-grey;
 
 $breakpoint-tablet-potrait: 1024px;
 $breakpoint-large-device: 961px;/* Large devices (laptops/desktops, 961px and up) */

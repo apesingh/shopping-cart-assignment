@@ -11,10 +11,8 @@
         float: left;
 		padding-right: 15px;
 		margin-top: 50px;
-		font: { 
-            weight: 600;
-            size: 100%;
-        }
+		font-weight: 600;
+        @include font-size(18px);
 	}
     .login-form {
 		width:35%;
@@ -22,10 +20,8 @@
 	}
 	.login-text {
 		margin-top: 14px;
-        font: { 
-		  weight: 400;
-		  size: 80%;
-        }
+        font-weight: 400;
+        @include font-size(14.5px);
         line-height: 130%;
 	}
 	.form-input {
@@ -42,7 +38,7 @@
 			display: block;
 			top: ($input-height / 2) + $placeholder-padding;
 			z-index: 2;
-			color: $highlight-color;
+			color: color('highlightcolor');
 			font-size: $placeholder-font-size;
 			transition: all $placeholder-transition;
 			width: 100%;
@@ -55,7 +51,7 @@
 			width: 100%;
 			font-size: $input-font-size;
 			border: 0;
-			border-bottom: 1px solid $input-border-color;
+			border-bottom: 1px solid color('darkgrey');
 			transition: border-color $placeholder-transition;
 			outline: none;
 			padding: 0;
@@ -72,13 +68,13 @@
 				top: 0;
 				cursor: inherit;
 				font-size: $placeholder-font-size-small;
-				color: $highlight-color;
+				color: color('highlightcolor');
 			}
-			border-bottom: 2px solid $dark-grey;
+			border-bottom: 2px solid color('darkgrey');
 		}
 	}
 	.form-button-large {
-		@include button-design;
+		@extend .button-design;
 		text-align: center;
 		text-decoration: none;
 		display: inline-block;
