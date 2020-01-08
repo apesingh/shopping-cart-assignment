@@ -1,15 +1,12 @@
 @import "variables.scss";
 
 /*------- MIXIN--------*/
-@mixin text-style($color, $weight:400) {
-    color: $color;
-    font-weight: $weight;
-}
 
 @mixin border-bottom($color, $width) {
   border-bottom: $width solid $color;
 }
 
+//Font styling
 @function calculateRem($size) {
   $remSize: $size / 16px;
   @return $remSize * 1rem;
@@ -18,6 +15,10 @@
 @mixin font-size($size) {
   font-size: $size;
   font-size: calculateRem($size);
+}
+@mixin text-style($color, $weight:400) {
+    color: $color;
+    font-weight: $weight;
 }
 
 //Padding mixin
@@ -40,11 +41,9 @@
 .button-design {
     background-color: color('buttoncolor');
     color: color('white');
-    padding: 5px;
     border: 1px solid color('buttoncolor');
     cursor: pointer;
 }
-
 
 .float-right{
     float: right;

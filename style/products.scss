@@ -169,7 +169,7 @@
         .pricing{
             @include font-size(11px);
             float: left;
-            text-align: center;
+            margin-top: 5px;
             width: 50%;
             display: none;
             @media only screen and (min-width: $breakpoint-large-device) {
@@ -181,6 +181,7 @@
             width: 100%;
             @include font-size(9px);
             float: right;
+            padding: 5px;
             .smaller-device{
                 display: inline;
                  color: color('white');

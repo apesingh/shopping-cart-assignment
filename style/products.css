@@ -9,7 +9,6 @@
 .button-design, .products-wrapper nav .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing {
   background-color: #d10157;
   color: #FFFFFF;
-  padding: 5px;
   border: 1px solid #d10157;
   cursor: pointer; }
 
@@ -170,7 +169,7 @@
       font-size: 11px;
       font-size: 0.6875rem;
       float: left;
-      text-align: center;
+      margin-top: 5px;
       width: 50%;
       display: none; }
       @media only screen and (min-width: 961px) {
@@ -180,7 +179,8 @@
       width: 100%;
       font-size: 9px;
       font-size: 0.5625rem;
-      float: right; }
+      float: right;
+      padding: 5px; }
       .products-wrapper .pricing-purchasing .purchasing .smaller-device {
         display: inline;
         color: #FFFFFF; }

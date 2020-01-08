@@ -9,7 +9,6 @@
 .button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper nav .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
   background-color: #d10157;
   color: #FFFFFF;
-  padding: 5px;
   border: 1px solid #d10157;
   cursor: pointer; }
 
@@ -45,14 +44,6 @@ html {
     @media only screen and (min-width: 768px) {
       html section {
         padding: 80px 0; } }
-  html .clearfix {
-    zoom: 1; }
-  html .clearfix:after {
-    content: '.';
-    clear: both;
-    display: block;
-    height: 0;
-    visibility: hidden; }
   html .header-wrapper {
     border-bottom: rgba(238, 238, 238, 0.867) solid 3px;
     padding: 3px 5px 0 5px; }
@@ -141,7 +132,6 @@ html {
 .button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper nav .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
   background-color: #d10157;
   color: #FFFFFF;
-  padding: 5px;
   border: 1px solid #d10157;
   cursor: pointer; }
 
@@ -237,7 +227,6 @@ html {
 .button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper nav .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
   background-color: #d10157;
   color: #FFFFFF;
-  padding: 5px;
   border: 1px solid #d10157;
   cursor: pointer; }
 
@@ -379,7 +368,6 @@ html {
 .button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper nav .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
   background-color: #d10157;
   color: #FFFFFF;
-  padding: 5px;
   border: 1px solid #d10157;
   cursor: pointer; }
 
@@ -540,7 +528,7 @@ html {
       font-size: 11px;
       font-size: 0.6875rem;
       float: left;
-      text-align: center;
+      margin-top: 5px;
       width: 50%;
       display: none; }
       @media only screen and (min-width: 961px) {
@@ -550,7 +538,8 @@ html {
       width: 100%;
       font-size: 9px;
       font-size: 0.5625rem;
-      float: right; }
+      float: right;
+      padding: 5px; }
       .products-wrapper .pricing-purchasing .purchasing .smaller-device {
         display: inline;
         color: #FFFFFF; }
@@ -572,7 +561,6 @@ html {
 .button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper nav .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
   background-color: #d10157;
   color: #FFFFFF;
-  padding: 5px;
   border: 1px solid #d10157;
   cursor: pointer; }
 
