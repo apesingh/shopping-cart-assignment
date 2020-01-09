@@ -16,26 +16,46 @@
   font-size: $size;
   font-size: calculateRem($size);
 }
+
 @mixin text-style($color, $weight:400) {
     color: $color;
     font-weight: $weight;
 }
 
-//Padding mixin
-@mixin padding($top, $right, $bottom, $left) {
-  padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
-  padding-left: $left;
+//Padding
+@mixin padding($padding) {
+    @if length($padding) == 1 {
+        padding: $padding+px;
+        //padding: $padding/10+rem;
+    }
+    @if length($padding) == 2 {
+        padding: nth($padding, 1)+px nth($padding, 2)+px;
+        //padding: nth($padding, 1)*0.1+rem nth($padding, 2)*0.1+rem;
+    }
+    @if length($padding) == 3 {
+        padding: nth($padding, 1)+px nth($padding, 2)+px nth($padding, 3)+px;
+       // padding: nth($padding, 1)*0.1+rem nth($padding, 2)*0.1+rem nth($padding, 3)*0.1+rem;
+    }
+    @if length($padding) == 4 {
+        padding: nth($padding, 1)+px nth($padding, 2)+px nth($padding, 3)+px nth($padding, 4)+px;
+       // padding: nth($padding, 1)*0.1+rem nth($padding, 2)*0.1+rem nth($padding, 3)*0.1+rem nth($padding, 4)*0.1+rem;
+    }
 }
-//Margin mixin
-@mixin margin($top, $right, $bottom, $left) {
-  margin-top: $top;
-  margin-right: $right;
-  margin-bottom: $bottom;
-  margin-left: $left;
+//Margin
+@mixin margin($margin) {
+    @if length($margin) == 1 {
+        margin: $margin+px;
+    }
+    @if length($margin) == 2 {
+        margin: nth($margin, 1)+px nth($margin, 2)+px;
+    }
+    @if length($margin) == 3 {
+        margin: nth($margin, 1)+px nth($margin, 2)+px nth($margin, 3)+px;
+    }
+    @if length($margin) == 4 {
+        margin: nth($margin, 1)+px nth($margin, 2)+px nth($margin, 3)+px nth($margin, 4)+px;
+    }
 }
-
 
 /*------- EXTEND CLASSES--------*/
 .button-design {
@@ -45,6 +65,17 @@
     cursor: pointer;
 }
 
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 .float-right{
     float: right;
 }
@@ -52,3 +83,17 @@
     float: left;
 }
 
+/*------- SKIP LINK STYLE--------*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}

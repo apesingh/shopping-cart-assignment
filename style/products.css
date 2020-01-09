@@ -6,7 +6,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*------- MIXIN--------*/
 /*------- EXTEND CLASSES--------*/
-.button-design, .products-wrapper nav .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing {
+.button-design, .products-wrapper aside .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing {
   background-color: #d10157;
   color: #FFFFFF;
   border: 1px solid #d10157;
@@ -18,25 +18,43 @@
 .float-left {
   float: left; }
 
+/*------- SKIP LINK STYLE--------*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100; }
+
+.skip-link:focus {
+  top: 0; }
+
 .products-wrapper {
   display: flex;
   width: 100%;
-  padding: 20px 0; }
-  .products-wrapper nav .dropdown {
+  padding: 20px 0px; }
+  @media only screen and (min-width: 961px) {
+    .products-wrapper {
+      padding: 0px; } }
+  .products-wrapper section {
+    padding: 0px; }
+  .products-wrapper aside .dropdown {
     display: block;
     float: left;
     width: 100%;
     overflow: hidden; }
     @media only screen and (min-width: 961px) {
-      .products-wrapper nav .dropdown {
+      .products-wrapper aside .dropdown {
         display: none; } }
-    .products-wrapper nav .dropdown .dropbtn {
+    .products-wrapper aside .dropdown .dropbtn {
       font-size: 18px;
       font-size: 1.125rem;
-      margin: 0;
+      margin: 0px;
       outline: none;
       width: 100%; }
-    .products-wrapper nav .dropdown .dropdown-content {
+    .products-wrapper aside .dropdown .dropdown-content {
       display: none;
       width: 100%;
       position: absolute;
@@ -44,10 +62,10 @@
       min-width: 160px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1; }
-      .products-wrapper nav .dropdown .dropdown-content a {
+      .products-wrapper aside .dropdown .dropdown-content a {
         float: none;
         padding: 12px 16px;
-        border-bottom: 1px solid #6B6B6B;
+        border-bottom: #6B6B6B solid 1px;
         text-decoration: none;
         display: block;
         text-align: left;
@@ -55,35 +73,35 @@
         font-weight: 400;
         font-size: 12.5px;
         font-size: 0.78125rem; }
-      .products-wrapper nav .dropdown .dropdown-content a:hover {
-        border-bottom: 1px solid #E67E22; }
-  .products-wrapper nav .dropdown:hover .dropdown-content {
+      .products-wrapper aside .dropdown .dropdown-content a:hover {
+        border-bottom: #E67E22 solid 1px; }
+  .products-wrapper aside .dropdown:hover .dropdown-content {
     display: block; }
-  .products-wrapper nav .categories-wrapper {
+  .products-wrapper aside .categories-wrapper {
     display: none;
+    height: 100%;
     background: rgba(238, 238, 238, 0.867);
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 0px;
     float: left;
     width: 25%; }
     @media only screen and (min-width: 961px) {
-      .products-wrapper nav .categories-wrapper {
+      .products-wrapper aside .categories-wrapper {
         display: block; } }
-    .products-wrapper nav .categories-wrapper .category-name {
+    .products-wrapper aside .categories-wrapper .category-name {
       color: #000000;
       font-weight: 400;
       font-size: 12.5px;
       font-size: 0.78125rem;
       padding: 14px;
-      border-bottom: 1px solid #6B6B6B;
+      border-bottom: #6B6B6B solid 1px;
       cursor: pointer;
       text-decoration: none; }
-    .products-wrapper nav .categories-wrapper li a:hover,
-    .products-wrapper nav .categories-wrapper li a:active {
-      border-bottom: 1px solid #E67E22; }
+    .products-wrapper aside .categories-wrapper li a:hover,
+    .products-wrapper aside .categories-wrapper li a:active {
+      border-bottom: #E67E22 solid 1px; }
   .products-wrapper .product-wrapper {
     width: 100%;
-    margin-top: 20px;
+    margin: 20px 0px 0px 0px;
     display: inline-block; }
     @media only screen and (min-width: 961px) {
       .products-wrapper .product-wrapper {
@@ -100,7 +118,6 @@
       .products-wrapper .product-name {
         height: 60px; } }
   .products-wrapper .product {
-    float: left;
     min-height: 200px;
     margin: 8px;
     border-bottom: 1px dashed;
@@ -109,23 +126,27 @@
     @media only screen and (min-width: 961px) {
       .products-wrapper .product {
         width: 20%;
-        min-height: 300px; } }
+        min-height: 300px;
+        float: left; } }
     @media only screen and (min-width: 401px) and (max-width: 960px) {
       .products-wrapper .product {
         width: 45%;
-        min-height: 300px; } }
+        min-height: 300px;
+        float: left; } }
   .products-wrapper .mask {
     background: rgba(238, 238, 238, 0.867);
     width: 1%;
     height: 160px;
     top: 5%;
     right: -10px;
-    position: absolute; }
+    position: absolute;
+    display: none; }
     @media only screen and (min-width: 961px) {
       .products-wrapper .mask {
-        height: 234px; } }
+        height: 234px;
+        display: block; } }
   .products-wrapper .product-image {
-    margin-top: 0px;
+    margin: 0px;
     width: 35%;
     display: inline-block; }
     @media only screen and (min-width: 961px) {
@@ -150,13 +171,13 @@
     padding: 5px;
     height: 88px;
     width: 55%;
-    margin-top: 0;
+    margin: 0px;
     position: absolute;
     display: inline-block; }
     @media only screen and (min-width: 961px) {
       .products-wrapper .product-description {
         width: 100%;
-        margin-top: 5px;
+        margin: 5px 0px 0px 0px;
         position: unset; } }
     .products-wrapper .product-description p {
       display: -webkit-box;
@@ -164,12 +185,12 @@
       -webkit-box-orient: vertical;
       overflow: hidden; }
   .products-wrapper .pricing-purchasing {
-    margin-top: 10px; }
+    margin: 10px 0px 0px 0px; }
     .products-wrapper .pricing-purchasing .pricing {
       font-size: 11px;
       font-size: 0.6875rem;
       float: left;
-      margin-top: 5px;
+      margin: 5px 0px 0px 0px;
       width: 50%;
       display: none; }
       @media only screen and (min-width: 961px) {

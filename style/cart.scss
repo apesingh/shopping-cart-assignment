@@ -2,7 +2,7 @@
 @import "helperClasses.scss";
 .cart-wrapper{
     background: color('grey');
-    padding: 0 ;
+    @include padding(0);
     @media only screen and (min-width: $breakpoint-phone){
         width: 70%;
         margin-left: auto;
@@ -11,7 +11,7 @@
     .my-cart{
         background: black;
         color: color('white');
-        padding: 10px;
+        @include padding(10);
     }
     .cart-items {
         display: inline-block;
@@ -19,7 +19,7 @@
     }
     .item-wrapper{
         min-height: 100px;
-        margin-top: 10px;
+        @include margin(10 0 0 0);
         display: flex;
         background: color('white');
     }
@@ -33,8 +33,7 @@
     .item-details{
         width: 70%;
         display: inline-block;
-        padding-left: 10px;
-        padding-top: 10px;
+        @include padding(10 10 0 0);
     }
     .items{
         width: 65%;
@@ -61,7 +60,7 @@
         }
     }
     .item-button{
-        margin-top: 17px;
+        @include margin(17 0 0 0);
         font-weight: 400;
         @include font-size(18px);
     }
@@ -70,7 +69,7 @@
         @extend .button-design;
         border-radius: 4px;
         width: 25px;
-        padding: 0;
+        @include padding(0);
     }
     input {
         border: none;
@@ -81,7 +80,7 @@
         margin: 10px auto;
         background: color('white');
         display: flex;
-        padding: 5px;
+        @include padding(5);
         width: 92%;
         .offer-image{
             float: left;
@@ -96,28 +95,28 @@
         .offer-heading{
             float: right;
             width: 50%;
-            padding: 10px;
+            @include padding(10);
             font-weight: 400;
             @include font-size(15px);
             @media only screen and (min-width: $breakpoint-phone){
-                padding: 15px 10px;
+                @include padding(15 10);
                 @include font-size(19px);
                 font-weight: 300;
             }
         }
     }
     .checkout{
-        margin-top: 60px;
+        @include margin(60 0 0 0);
         min-height: 100px;
         background: color('white');
-        padding: 10px;
+        @include padding(10);
         .btn-checkout{
             @extend .button-design;
             width: 100%;
             height: 40px;
-            padding: 13px;
+            @include padding(13);
             border-radius: 6px;
-            margin-top: 18px;
+            @include margin(18 0 0 0);
         }
         p{
             text-align: center;
@@ -136,14 +135,14 @@
         padding-top: 20%;
         .helper-text{
             @include font-size(19px);
-            margin-top: 10px;
+            @include margin(10 0 0 0);
             color: #847777;
         }
         .btn-start{
             @extend .button-design;
             width: 100%;
             height: 40px;
-            padding: 13px;
+            @include padding(13);
             border-radius: 6px;
             text-align: center;
             margin-top: 39%;

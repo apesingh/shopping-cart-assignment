@@ -18,9 +18,23 @@
 .float-left {
   float: left; }
 
+/*------- SKIP LINK STYLE--------*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100; }
+
+.skip-link:focus {
+  top: 0; }
+
 html {
   background-color: #FFFFFF;
   color: #6B6B6B;
+  height: 100%;
   font-family: 'Lato', 'Arial', 'sans-serif';
   font-size: 18px;
   font-weight: 300;
@@ -40,16 +54,16 @@ html {
   html .row:after {
     clear: both; }
   html section {
-    padding: 20px 0; }
+    padding: 20px 0px; }
     @media only screen and (min-width: 768px) {
       html section {
-        padding: 80px 0; } }
+        padding: 80px 0px; } }
   html .header-wrapper {
     border-bottom: rgba(238, 238, 238, 0.867) solid 3px;
-    padding: 3px 5px 0 5px; }
+    padding: 3px 5px 0px 5px; }
     @media only screen and (min-width: 768px) {
       html .header-wrapper {
-        padding: 0; } }
+        padding: 0px; } }
     html .header-wrapper .row {
       position: relative; }
     html .header-wrapper nav {
@@ -93,7 +107,7 @@ html {
             right: 0; }
           html .header-wrapper nav .nav-bar .main-nav li a:link,
           html .header-wrapper nav .nav-bar .main-nav li a:visited {
-            padding: 8px 0;
+            padding: 8px 0px;
             text-decoration: none;
             border-bottom: transparent solid 1px;
             -webkit-transition: border-bottom 0.2s;
@@ -112,7 +126,7 @@ html {
         font-weight: 400; }
         @media only screen and (min-width: 768px) {
           html .header-wrapper nav .cart-container {
-            margin-top: 4%; } }
+            margin: 43px 0px 0px 0px; } }
         html .header-wrapper nav .cart-container a {
           background: rgba(238, 238, 238, 0.867);
           padding: 14px 24px;

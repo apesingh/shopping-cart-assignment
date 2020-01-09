@@ -21,7 +21,7 @@
         cursor: pointer;
         height: 6px;
         width: 6px;
-        margin: 0 8px;
+        @include margin(0 8 0 8);
         background-color: color('midgrey');
         border-radius: 50%;
         display: inline-block;
@@ -36,7 +36,7 @@
         position: absolute;
         top: 42%;
         width: auto;
-        padding: 5px;
+        @include padding(5);
         color:color('white');
         transition: 0.6s ease;
         background-color: rgba(0, 0, 0, 0.2);
@@ -53,13 +53,13 @@
         right: 8px;
     }
     .category-wrapper{
-        margin-top: 20px;
+         @include margin(20 0 0 0);
         .category-section{
             min-height: 192px;
             @media only screen and (min-width: $breakpoint-phone) {
                 min-height: 230px;
             }
-            padding: 10px;
+            @include padding(10);
             position: relative;
             &::after {
                 content: "";
@@ -76,7 +76,7 @@
         .category{
             float: left;
             width: 37%;
-            margin: 0;
+            @include margin(0);
             overflow: hidden;
             position: absolute;
             top: 50%;
@@ -92,7 +92,7 @@
         }
         .category-desc{
             float: right;
-            margin-top: 30px;
+            @include margin(30 0 0 0);
             text-align: center;
             width: 60%;
             @media only screen and (min-width: $breakpoint-phone) {
@@ -109,7 +109,7 @@
             }
         }
         .category-text{
-            margin-top: 15px;
+             @include margin(15 0 0 0);
             font: {
                 weight: 400;
                 size: 70%;
@@ -117,11 +117,11 @@
             line-height: 145%;
         }
         .button-align{
-            margin-top: 15px;
+             @include margin(15 0 0 0);
         }
         .category-button{
             @extend .button-design;
-            padding: 7px;
+            @include padding(7);
         }
         .filter{
             color: color('white');

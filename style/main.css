@@ -6,7 +6,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*------- MIXIN--------*/
 /*------- EXTEND CLASSES--------*/
-.button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper nav .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
+.button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper aside .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
   background-color: #d10157;
   color: #FFFFFF;
   border: 1px solid #d10157;
@@ -18,9 +18,23 @@
 .float-left {
   float: left; }
 
+/*------- SKIP LINK STYLE--------*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100; }
+
+.skip-link:focus {
+  top: 0; }
+
 html {
   background-color: #FFFFFF;
   color: #6B6B6B;
+  height: 100%;
   font-family: 'Lato', 'Arial', 'sans-serif';
   font-size: 18px;
   font-weight: 300;
@@ -40,16 +54,16 @@ html {
   html .row:after {
     clear: both; }
   html section {
-    padding: 20px 0; }
+    padding: 20px 0px; }
     @media only screen and (min-width: 768px) {
       html section {
-        padding: 80px 0; } }
+        padding: 80px 0px; } }
   html .header-wrapper {
     border-bottom: rgba(238, 238, 238, 0.867) solid 3px;
-    padding: 3px 5px 0 5px; }
+    padding: 3px 5px 0px 5px; }
     @media only screen and (min-width: 768px) {
       html .header-wrapper {
-        padding: 0; } }
+        padding: 0px; } }
     html .header-wrapper .row {
       position: relative; }
     html .header-wrapper nav {
@@ -93,7 +107,7 @@ html {
             right: 0; }
           html .header-wrapper nav .nav-bar .main-nav li a:link,
           html .header-wrapper nav .nav-bar .main-nav li a:visited {
-            padding: 8px 0;
+            padding: 8px 0px;
             text-decoration: none;
             border-bottom: transparent solid 1px;
             -webkit-transition: border-bottom 0.2s;
@@ -112,7 +126,7 @@ html {
         font-weight: 400; }
         @media only screen and (min-width: 768px) {
           html .header-wrapper nav .cart-container {
-            margin-top: 4%; } }
+            margin: 43px 0px 0px 0px; } }
         html .header-wrapper nav .cart-container a {
           background: rgba(238, 238, 238, 0.867);
           padding: 14px 24px;
@@ -129,7 +143,7 @@ html {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*------- MIXIN--------*/
 /*------- EXTEND CLASSES--------*/
-.button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper nav .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
+.button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper aside .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
   background-color: #d10157;
   color: #FFFFFF;
   border: 1px solid #d10157;
@@ -141,31 +155,52 @@ html {
 .float-left {
   float: left; }
 
+/*------- SKIP LINK STYLE--------*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100; }
+
+.skip-link:focus {
+  top: 0; }
+
 .login-wrapper {
   padding: 2px 10px; }
   @media only screen and (min-width: 768px) {
     .login-wrapper {
-      padding: 0; } }
+      padding: 0px; } }
   .login-wrapper .login-details {
     width: 50%;
     display: inline-block;
     float: left;
-    padding-right: 15px;
-    margin-top: 50px;
+    padding: 0px 0px 0px 15px;
+    margin: 50px 0px 0px 0px;
     font-weight: 600;
-    font-size: 18px;
-    font-size: 1.125rem; }
+    font-size: 15px;
+    font-size: 0.9375rem; }
+    @media only screen and (min-width: 768px) {
+      .login-wrapper .login-details {
+        font-size: 18px;
+        font-size: 1.125rem; } }
   .login-wrapper .login-form {
     width: 35%;
     display: inline-block; }
   .login-wrapper .login-text {
-    margin-top: 14px;
+    margin: 14px 0px 0px 0px;
     font-weight: 400;
-    font-size: 14.5px;
-    font-size: 0.90625rem;
+    font-size: 12.5px;
+    font-size: 0.78125rem;
     line-height: 130%; }
+    @media only screen and (min-width: 768px) {
+      .login-wrapper .login-text {
+        font-size: 14.5px;
+        font-size: 0.90625rem; } }
   .login-wrapper .form-input {
-    margin: 40px 0;
+    margin: 40px 0px;
     width: 100%; }
     .login-wrapper .form-input label {
       position: relative;
@@ -189,18 +224,18 @@ html {
       width: 100%;
       font-size: 16px;
       border: 0;
-      border-bottom: 1px solid #eeeeee;
+      border-bottom: #eeeeee solid 1px;
       transition: border-color 200ms ease-in-out;
       outline: none;
-      padding: 0;
-      margin: 0; }
+      padding: 0px;
+      margin: 0px; }
     .login-wrapper .form-input input {
       height: 35px; }
     .login-wrapper .form-input input:focus,
     .login-wrapper .form-input input,
     .login-wrapper .form-input textarea:focus,
     .login-wrapper .form-input textarea {
-      border-bottom: 2px solid #eeeeee; }
+      border-bottom: #eeeeee solid 2px; }
       .login-wrapper .form-input input:focus + .placeholder,
       .login-wrapper .form-input input + .placeholder,
       .login-wrapper .form-input textarea:focus + .placeholder,
@@ -224,7 +259,7 @@ html {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*------- MIXIN--------*/
 /*------- EXTEND CLASSES--------*/
-.button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper nav .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
+.button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper aside .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
   background-color: #d10157;
   color: #FFFFFF;
   border: 1px solid #d10157;
@@ -235,6 +270,19 @@ html {
 
 .float-left {
   float: left; }
+
+/*------- SKIP LINK STYLE--------*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100; }
+
+.skip-link:focus {
+  top: 0; }
 
 .banner-wrapper .image-width {
   width: 100%;
@@ -254,7 +302,7 @@ html {
   cursor: pointer;
   height: 6px;
   width: 6px;
-  margin: 0 8px;
+  margin: 0px 8px 0px 8px;
   background-color: #D8DCE3;
   border-radius: 50%;
   display: inline-block;
@@ -286,7 +334,7 @@ html {
   right: 8px; }
 
 .banner-wrapper .category-wrapper {
-  margin-top: 20px; }
+  margin: 20px 0px 0px 0px; }
   .banner-wrapper .category-wrapper .category-section {
     min-height: 192px;
     padding: 10px;
@@ -307,7 +355,7 @@ html {
   .banner-wrapper .category-wrapper .category {
     float: left;
     width: 37%;
-    margin: 0;
+    margin: 0px;
     overflow: hidden;
     position: absolute;
     top: 50%;
@@ -321,7 +369,7 @@ html {
       height: auto; }
   .banner-wrapper .category-wrapper .category-desc {
     float: right;
-    margin-top: 30px;
+    margin: 30px 0px 0px 0px;
     text-align: center;
     width: 60%; }
     @media only screen and (min-width: 768px) {
@@ -338,12 +386,12 @@ html {
         font-size: 20px;
         font-size: 1.25rem; } }
   .banner-wrapper .category-wrapper .category-text {
-    margin-top: 15px;
+    margin: 15px 0px 0px 0px;
     font-weight: 400;
     font-size: 70%;
     line-height: 145%; }
   .banner-wrapper .category-wrapper .button-align {
-    margin-top: 15px; }
+    margin: 15px 0px 0px 0px; }
   .banner-wrapper .category-wrapper .category-button {
     padding: 7px; }
   .banner-wrapper .category-wrapper .filter {
@@ -365,7 +413,7 @@ html {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*------- MIXIN--------*/
 /*------- EXTEND CLASSES--------*/
-.button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper nav .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
+.button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper aside .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
   background-color: #d10157;
   color: #FFFFFF;
   border: 1px solid #d10157;
@@ -377,25 +425,43 @@ html {
 .float-left {
   float: left; }
 
+/*------- SKIP LINK STYLE--------*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100; }
+
+.skip-link:focus {
+  top: 0; }
+
 .products-wrapper {
   display: flex;
   width: 100%;
-  padding: 20px 0; }
-  .products-wrapper nav .dropdown {
+  padding: 20px 0px; }
+  @media only screen and (min-width: 961px) {
+    .products-wrapper {
+      padding: 0px; } }
+  .products-wrapper section {
+    padding: 0px; }
+  .products-wrapper aside .dropdown {
     display: block;
     float: left;
     width: 100%;
     overflow: hidden; }
     @media only screen and (min-width: 961px) {
-      .products-wrapper nav .dropdown {
+      .products-wrapper aside .dropdown {
         display: none; } }
-    .products-wrapper nav .dropdown .dropbtn {
+    .products-wrapper aside .dropdown .dropbtn {
       font-size: 18px;
       font-size: 1.125rem;
-      margin: 0;
+      margin: 0px;
       outline: none;
       width: 100%; }
-    .products-wrapper nav .dropdown .dropdown-content {
+    .products-wrapper aside .dropdown .dropdown-content {
       display: none;
       width: 100%;
       position: absolute;
@@ -403,10 +469,10 @@ html {
       min-width: 160px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1; }
-      .products-wrapper nav .dropdown .dropdown-content a {
+      .products-wrapper aside .dropdown .dropdown-content a {
         float: none;
         padding: 12px 16px;
-        border-bottom: 1px solid #6B6B6B;
+        border-bottom: #6B6B6B solid 1px;
         text-decoration: none;
         display: block;
         text-align: left;
@@ -414,35 +480,35 @@ html {
         font-weight: 400;
         font-size: 12.5px;
         font-size: 0.78125rem; }
-      .products-wrapper nav .dropdown .dropdown-content a:hover {
-        border-bottom: 1px solid #E67E22; }
-  .products-wrapper nav .dropdown:hover .dropdown-content {
+      .products-wrapper aside .dropdown .dropdown-content a:hover {
+        border-bottom: #E67E22 solid 1px; }
+  .products-wrapper aside .dropdown:hover .dropdown-content {
     display: block; }
-  .products-wrapper nav .categories-wrapper {
+  .products-wrapper aside .categories-wrapper {
     display: none;
+    height: 100%;
     background: rgba(238, 238, 238, 0.867);
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 0px;
     float: left;
     width: 25%; }
     @media only screen and (min-width: 961px) {
-      .products-wrapper nav .categories-wrapper {
+      .products-wrapper aside .categories-wrapper {
         display: block; } }
-    .products-wrapper nav .categories-wrapper .category-name {
+    .products-wrapper aside .categories-wrapper .category-name {
       color: #000000;
       font-weight: 400;
       font-size: 12.5px;
       font-size: 0.78125rem;
       padding: 14px;
-      border-bottom: 1px solid #6B6B6B;
+      border-bottom: #6B6B6B solid 1px;
       cursor: pointer;
       text-decoration: none; }
-    .products-wrapper nav .categories-wrapper li a:hover,
-    .products-wrapper nav .categories-wrapper li a:active {
-      border-bottom: 1px solid #E67E22; }
+    .products-wrapper aside .categories-wrapper li a:hover,
+    .products-wrapper aside .categories-wrapper li a:active {
+      border-bottom: #E67E22 solid 1px; }
   .products-wrapper .product-wrapper {
     width: 100%;
-    margin-top: 20px;
+    margin: 20px 0px 0px 0px;
     display: inline-block; }
     @media only screen and (min-width: 961px) {
       .products-wrapper .product-wrapper {
@@ -459,7 +525,6 @@ html {
       .products-wrapper .product-name {
         height: 60px; } }
   .products-wrapper .product {
-    float: left;
     min-height: 200px;
     margin: 8px;
     border-bottom: 1px dashed;
@@ -468,23 +533,27 @@ html {
     @media only screen and (min-width: 961px) {
       .products-wrapper .product {
         width: 20%;
-        min-height: 300px; } }
+        min-height: 300px;
+        float: left; } }
     @media only screen and (min-width: 401px) and (max-width: 960px) {
       .products-wrapper .product {
         width: 45%;
-        min-height: 300px; } }
+        min-height: 300px;
+        float: left; } }
   .products-wrapper .mask {
     background: rgba(238, 238, 238, 0.867);
     width: 1%;
     height: 160px;
     top: 5%;
     right: -10px;
-    position: absolute; }
+    position: absolute;
+    display: none; }
     @media only screen and (min-width: 961px) {
       .products-wrapper .mask {
-        height: 234px; } }
+        height: 234px;
+        display: block; } }
   .products-wrapper .product-image {
-    margin-top: 0px;
+    margin: 0px;
     width: 35%;
     display: inline-block; }
     @media only screen and (min-width: 961px) {
@@ -509,13 +578,13 @@ html {
     padding: 5px;
     height: 88px;
     width: 55%;
-    margin-top: 0;
+    margin: 0px;
     position: absolute;
     display: inline-block; }
     @media only screen and (min-width: 961px) {
       .products-wrapper .product-description {
         width: 100%;
-        margin-top: 5px;
+        margin: 5px 0px 0px 0px;
         position: unset; } }
     .products-wrapper .product-description p {
       display: -webkit-box;
@@ -523,12 +592,12 @@ html {
       -webkit-box-orient: vertical;
       overflow: hidden; }
   .products-wrapper .pricing-purchasing {
-    margin-top: 10px; }
+    margin: 10px 0px 0px 0px; }
     .products-wrapper .pricing-purchasing .pricing {
       font-size: 11px;
       font-size: 0.6875rem;
       float: left;
-      margin-top: 5px;
+      margin: 5px 0px 0px 0px;
       width: 50%;
       display: none; }
       @media only screen and (min-width: 961px) {
@@ -558,7 +627,7 @@ html {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*------- MIXIN--------*/
 /*------- EXTEND CLASSES--------*/
-.button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper nav .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
+.button-design, .login-wrapper .form-button-large, .banner-wrapper .category-wrapper .category-button, .products-wrapper aside .dropdown .dropbtn, .products-wrapper .pricing-purchasing .purchasing, .cart-wrapper .btn, .cart-wrapper .checkout .btn-checkout, .cart-wrapper .cart-exception .btn-start {
   background-color: #d10157;
   color: #FFFFFF;
   border: 1px solid #d10157;
@@ -570,9 +639,22 @@ html {
 .float-left {
   float: left; }
 
+/*------- SKIP LINK STYLE--------*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100; }
+
+.skip-link:focus {
+  top: 0; }
+
 .cart-wrapper {
   background: rgba(238, 238, 238, 0.867);
-  padding: 0; }
+  padding: 0px; }
   @media only screen and (min-width: 768px) {
     .cart-wrapper {
       width: 70%;
@@ -587,7 +669,7 @@ html {
     width: 100%; }
   .cart-wrapper .item-wrapper {
     min-height: 100px;
-    margin-top: 10px;
+    margin: 10px 0px 0px 0px;
     display: flex;
     background: #FFFFFF; }
   .cart-wrapper .item-img {
@@ -598,8 +680,7 @@ html {
   .cart-wrapper .item-details {
     width: 70%;
     display: inline-block;
-    padding-left: 10px;
-    padding-top: 10px; }
+    padding: 10px 10px 0px 0px; }
   .cart-wrapper .items {
     width: 65%;
     display: inline-block; }
@@ -625,14 +706,14 @@ html {
         position: unset;
         right: 0; } }
   .cart-wrapper .item-button {
-    margin-top: 17px;
+    margin: 17px 0px 0px 0px;
     font-weight: 400;
     font-size: 18px;
     font-size: 1.125rem; }
   .cart-wrapper .btn {
     border-radius: 4px;
     width: 25px;
-    padding: 0; }
+    padding: 0px; }
   .cart-wrapper input {
     border: none;
     text-align: center;
@@ -665,7 +746,7 @@ html {
           font-size: 1.1875rem;
           font-weight: 300; } }
   .cart-wrapper .checkout {
-    margin-top: 60px;
+    margin: 60px 0px 0px 0px;
     min-height: 100px;
     background: #FFFFFF;
     padding: 10px; }
@@ -674,7 +755,7 @@ html {
       height: 40px;
       padding: 13px;
       border-radius: 6px;
-      margin-top: 18px; }
+      margin: 18px 0px 0px 0px; }
     .cart-wrapper .checkout p {
       text-align: center;
       font-weight: 400;
@@ -692,7 +773,7 @@ html {
     .cart-wrapper .cart-exception .helper-text {
       font-size: 19px;
       font-size: 1.1875rem;
-      margin-top: 10px;
+      margin: 10px 0px 0px 0px;
       color: #847777; }
     .cart-wrapper .cart-exception .btn-start {
       width: 100%;
@@ -703,13 +784,19 @@ html {
       margin-top: 39%; }
 
 footer {
-  margin-top: 20px;
+  margin: 20px 0px 0px 0px;
   background: rgba(238, 238, 238, 0.867);
   display: block;
   width: 100%;
-  padding: 10px 0;
-  font-size: 11px;
-  font-size: 0.6875rem;
+  padding: 10px 0px;
+  font-size: 10px;
+  font-size: 0.625rem;
   color: #6B6B6B; }
   footer .row {
-    text-align: left; }
+    text-align: center; }
+  @media only screen and (min-width: 768px) {
+    footer {
+      font-size: 11px;
+      font-size: 0.6875rem; }
+      footer .row {
+        text-align: left; } }

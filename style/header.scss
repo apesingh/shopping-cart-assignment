@@ -3,7 +3,8 @@
 
 html {
     background-color: color('white');
-    color: color('darkergrey'); 
+    color: color('darkergrey');
+    height: 100%;
     font: {
         family: 'Lato', 'Arial', 'sans-serif';
         size: $mobile-font-size;
@@ -29,16 +30,17 @@ html {
     }
     section {
         @media only screen and (min-width: $breakpoint-phone) {
-           padding: 80px 0;
+            @include padding(80 0);
         }
-        padding: 20px 0;
+        @include padding(20 0);
     }
     
     .header-wrapper {
         @include border-bottom(3px, color('grey')); 
-        padding: 3px 5px 0 5px;
+        @include padding(3 5 0 5);
         @media only screen and (min-width: $breakpoint-phone) {
-            padding: 0;
+            @include padding(0);
+             
         }
         .row {position: relative;}
         nav {
@@ -51,7 +53,7 @@ html {
                 .logo-img {
                     height: auto;
                     width: 100%;
-                    padding: 10px;
+                    @include padding(10);
                 }
             }
             .nav-bar {
@@ -86,7 +88,7 @@ html {
                         }
                         li a:link,
                         li a:visited {
-                            padding: 8px 0;
+                            @include padding(8 0);
                             text-decoration: none;
                             @include border-bottom(1px, transparent); 
                            
@@ -108,12 +110,13 @@ html {
                 @include font-size(11.5px);
                 @include text-style(color('darkgrey'), 400);
                 @media only screen and (min-width: $breakpoint-phone) {
-                    margin-top: 4%;
+                    //margin-top: 4%;
+                    @include margin(43 0 0 0);
 
                 }
                 a {
                     background: color('grey');
-                    padding: 14px 24px;
+                    @include padding(14 24);
                     text-align: center;                       
                     display: inline-block;
                 }

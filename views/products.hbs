@@ -1,6 +1,6 @@
-<section class="products-wrapper">
+<div class="products-wrapper">
     <div class="row">
-        <nav>
+        <aside>
             <ul class="categories-wrapper">
                 {{#each categories}}
                     {{#if this.enabled}}
@@ -20,8 +20,8 @@
                     {{/each}}
                 </div>
             </div> 
-        </nav>
-        <div class="product-wrapper">
+        </aside>
+        <section class="product-wrapper">
             {{#each products}}
                 <div class="product position-rel">
                     <div class="product-name" title="{{this.name}}">{{this.name}}</div>
@@ -37,6 +37,6 @@
                     </div>
                 </div>
             {{/each}}
-        </div>
+        </section>
     </div>
-</section>
+</div>

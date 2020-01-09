@@ -4,14 +4,20 @@
 @import "products.scss";
 @import "cart.scss";
 footer {
-    margin-top: 20px;
+    @include margin(20 0 0 0);
     background: color('grey');
     display: block;
     width: 100%;
-    padding: 10px 0;
-    @include font-size(11px);
+    @include padding(10 0);
+    @include font-size(10px);
     color: color('darkergrey');
     .row{
-        text-align: left;
+        text-align: center;
+    }
+    @media only screen and (min-width: $breakpoint-phone) {
+        @include font-size(11px);
+        .row{
+            text-align: left;
+        }
     }
   }
