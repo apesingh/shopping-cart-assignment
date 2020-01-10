@@ -122,6 +122,7 @@
         .category-button{
             @extend .button-design;
             @include padding(7);
+            color: color('white');
         }
         .filter{
             color: color('white');

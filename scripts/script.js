@@ -111,14 +111,31 @@
             carousal.click();
         }
     }, 5000); 
-function myFunction() {
-    var x = document.getElementById("Demo");
-    if (x.className.indexOf("display-block") == -1) {
-        x.className += "display-block";
-    } else { 
-        x.className = x.className.replace("display-block", "");
+
+/*hamburger menu*/
+    function showMobileMenu() {
+      var x = document.getElementById("menuLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
     }
-}
+
+    function exploreCategory(category_id) {
+        window.location.href = "/products/"+category_id;
+    }
+
+//function myFunction() {
+//    var x = document.getElementById("Demo");
+//    if (x.className.indexOf("display-block") == -1) {
+//        x.className += "display-block";
+//    } else { 
+//        x.className = x.className.replace("display-block", "");
+//    }
+//}
+
+
 function navigateToHome(){
     window.location.href = "/";
 }

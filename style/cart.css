@@ -36,7 +36,7 @@
   padding: 0px; }
   @media only screen and (min-width: 768px) {
     .cart-wrapper {
-      width: 70%;
+      width: 50%;
       margin-left: auto;
       margin-right: auto; } }
   .cart-wrapper .my-cart {
@@ -59,18 +59,18 @@
   .cart-wrapper .item-details {
     width: 70%;
     display: inline-block;
-    padding: 10px 10px 0px 0px; }
+    padding: 10px 0px 0px 10px; }
   .cart-wrapper .items {
     width: 65%;
     display: inline-block; }
     .cart-wrapper .items h4 {
       font-weight: 600;
-      font-size: 13.5px;
-      font-size: 0.84375rem; }
+      font-size: 12px;
+      font-size: 0.75rem; }
       @media only screen and (min-width: 768px) {
         .cart-wrapper .items h4 {
-          font-size: 19px;
-          font-size: 1.1875rem; } }
+          font-size: 15px;
+          font-size: 0.9375rem; } }
   .cart-wrapper .item-total {
     width: 30%;
     display: inline-block;
@@ -78,8 +78,8 @@
     position: absolute;
     right: 5px;
     font-weight: 400;
-    font-size: 18px;
-    font-size: 1.125rem; }
+    font-size: 15px;
+    font-size: 0.9375rem; }
     @media only screen and (min-width: 768px) {
       .cart-wrapper .item-total {
         position: unset;
@@ -87,8 +87,8 @@
   .cart-wrapper .item-button {
     margin: 17px 0px 0px 0px;
     font-weight: 400;
-    font-size: 18px;
-    font-size: 1.125rem; }
+    font-size: 15px;
+    font-size: 0.9375rem; }
   .cart-wrapper .btn {
     border-radius: 4px;
     width: 25px;
@@ -116,13 +116,13 @@
       width: 50%;
       padding: 10px;
       font-weight: 400;
-      font-size: 15px;
-      font-size: 0.9375rem; }
+      font-size: 12px;
+      font-size: 0.75rem; }
       @media only screen and (min-width: 768px) {
         .cart-wrapper .product-offer .offer-heading {
           padding: 15px 10px;
-          font-size: 19px;
-          font-size: 1.1875rem;
+          font-size: 14px;
+          font-size: 0.875rem;
           font-weight: 300; } }
   .cart-wrapper .checkout {
     margin: 60px 0px 0px 0px;
@@ -138,20 +138,20 @@
     .cart-wrapper .checkout p {
       text-align: center;
       font-weight: 400;
-      font-size: 17px;
-      font-size: 1.0625rem; }
+      font-size: 15px;
+      font-size: 0.9375rem; }
   .cart-wrapper .font-color {
     color: #FFFFFF; }
   .cart-wrapper .cart-exception {
     background: #FFFFFF;
     min-height: 350px;
     text-align: center;
-    font-size: 27px;
-    font-size: 1.6875rem;
+    font-size: 22px;
+    font-size: 1.375rem;
     padding-top: 20%; }
     .cart-wrapper .cart-exception .helper-text {
-      font-size: 19px;
-      font-size: 1.1875rem;
+      font-size: 16px;
+      font-size: 1rem;
       margin: 10px 0px 0px 0px;
       color: #847777; }
     .cart-wrapper .cart-exception .btn-start {
