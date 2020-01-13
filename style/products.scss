@@ -177,22 +177,24 @@
             @include font-size(11px);
             float: left;
             @include margin(5 0 0 0);
-            width: 50%;
+            width: 45%;
             display: none;
             @media only screen and (min-width: $breakpoint-large-device) {
                 display: block;
+                width: 45%;
             }
         }
         .purchasing{
             @extend .button-design;
             @include font-size(9px);
             float: right;
+            @include margin(0 17 0 0);
             width: 60%;
-            @include margin(0 0 0 14);
             @include padding(5);
             @media only screen and (min-width: $breakpoint-large-device) {
-               @include padding(10);
-               width: 100%;
+               @include padding(10 0 10 0);
+                @include margin(0 0 0 14);
+               width: 45%;
             }
             .smaller-device{
                 display: inline;
@@ -200,9 +202,6 @@
                 @media only screen and (min-width: $breakpoint-large-device) {
                     display: none;
                 }
-            }
-            @media only screen and (min-width: $breakpoint-large-device) {
-                width: 50%;
             }
         }
     }

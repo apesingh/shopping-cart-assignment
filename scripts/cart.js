@@ -43,6 +43,11 @@ router.get('/:id/:operation', function (req, res) {
         element.count = element.count - 1;
         itemCounter.item_counter = itemCounter.item_counter - 1;
         element.total_price = element.count * element.price;
+          if(element.count == 0){
+                let elementIndex = productInCart.indexOf(element);
+                console.log("a",elementIndex);
+                productInCart.splice(elementIndex, 1);
+          }
       }
     });
     res.end(JSON.stringify({ 'cartItems': productInCart, 'item_counter': itemCounter.item_counter }));

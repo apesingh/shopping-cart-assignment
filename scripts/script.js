@@ -57,6 +57,7 @@
                 return response.json();
             }
         }).then((myJson) => {
+            console.log("myJson--",myJson);
             updateCart(myJson.item_counter, myJson.cartItems);
         }); 
  

@@ -191,28 +191,27 @@
       font-size: 0.6875rem;
       float: left;
       margin: 5px 0px 0px 0px;
-      width: 50%;
+      width: 45%;
       display: none; }
       @media only screen and (min-width: 961px) {
         .products-wrapper .pricing-purchasing .pricing {
-          display: block; } }
+          display: block;
+          width: 45%; } }
     .products-wrapper .pricing-purchasing .purchasing {
       font-size: 9px;
       font-size: 0.5625rem;
       float: right;
+      margin: 0px 17px 0px 0px;
       width: 60%;
-      margin: 0px 0px 0px 14px;
       padding: 5px; }
       @media only screen and (min-width: 961px) {
         .products-wrapper .pricing-purchasing .purchasing {
-          padding: 10px;
-          width: 100%; } }
+          padding: 10px 0px 10px 0px;
+          margin: 0px 0px 0px 14px;
+          width: 45%; } }
       .products-wrapper .pricing-purchasing .purchasing .smaller-device {
         display: inline;
         color: #FFFFFF; }
         @media only screen and (min-width: 961px) {
           .products-wrapper .pricing-purchasing .purchasing .smaller-device {
             display: none; } }
-      @media only screen and (min-width: 961px) {
-        .products-wrapper .pricing-purchasing .purchasing {
-          width: 50%; } }
