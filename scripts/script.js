@@ -1,3 +1,13 @@
+
+    if (window.location.pathname == "/cart") {
+        let x = document.getElementById("bg-overlay");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
     function request_server() {
         const url = window.location.origin + "/cart/allitem";
         fetch(url)
@@ -6,13 +16,13 @@
             })
             .then(function (myJson) {
                 let data = myJson;
-                let totalCheckoutSpan = document.getElementById("totalCheckoutAmount");
+                //let totalCheckoutSpan = document.getElementById("totalCheckoutAmount");
                 document.getElementById("item_counter").innerHTML = data.item_counter;
                 let totalCheckoutPrice = 0;
                 data.cartItems.forEach(function(element) {
                     totalCheckoutPrice = totalCheckoutPrice + element.total_price;
                 });
-                totalCheckoutSpan.innerHTML = "Rs. "+totalCheckoutPrice;
+                document.getElementById("totalCheckoutAmount").innerHTML = "Rs. "+totalCheckoutPrice;
             });
     }
     
@@ -26,12 +36,12 @@
     
     function updateCheckoutAmount() {
         let checkoutAccumulation = document.getElementsByClassName("total");
-        let totalCheckoutSpan = document.getElementById("totalCheckoutAmount");
+        //let totalCheckoutSpan = document.getElementById("totalCheckoutAmount");
         let totalCheckoutPrice = 0;
         for (let i = 0; i < checkoutAccumulation.length; i++) {
             totalCheckoutPrice = totalCheckoutPrice + parseInt(checkoutAccumulation[i].innerHTML);
         }
-        totalCheckoutSpan.innerHTML = "Rs. "+totalCheckoutPrice;
+        document.getElementById("totalCheckoutAmount").innerHTML = "Rs. "+totalCheckoutPrice;
     }
     
     if (window.location.pathname === "/cart") {
@@ -124,6 +134,11 @@
 
     function exploreCategory(category_id) {
         window.location.href = "/products/"+category_id;
+    }
+
+    //const closeCart = () => {
+    function closeCart() {
+         window.history.back();
     }
 
 //function myFunction() {

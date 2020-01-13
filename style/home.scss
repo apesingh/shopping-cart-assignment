@@ -55,7 +55,7 @@
     .category-wrapper{
          @include margin(20 0 0 0);
         .category-section{
-            min-height: 192px;
+            min-height: 222px;
             @media only screen and (min-width: $breakpoint-phone) {
                 min-height: 230px;
             }

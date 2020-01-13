@@ -5,8 +5,18 @@
     @include padding(0);
     @media only screen and (min-width: $breakpoint-phone){
         width: 50%;
-        margin-left: auto;
-        margin-right: auto
+    }
+    .overlay{
+        position: fixed;
+        width: 100%;
+        height: 600px;
+        @media only screen and (min-width: $breakpoint-phone){
+            width: 45%;
+            right: 10%;
+        }
+        z-index: 200;
+        overflow: auto;
+        background: color('lightbackground');
     }
     .my-cart{
         background: black;
@@ -24,8 +34,12 @@
         background: color('white');
     }
     .item-img{
-        width: 25%;
+        width: 20%;
         display: inline-block;
+        @media only screen and (min-width: $breakpoint-phone){
+            @include padding(10);
+            width: 10%;
+        }
         .img-cart{
             width: 100%;
         }
@@ -42,7 +56,7 @@
             font-weight: 600;
             @include font-size(12px);
             @media only screen and (min-width: $breakpoint-phone){
-                @include font-size(15px);
+                @include font-size(13px);
             }
         }
     }
@@ -53,7 +67,7 @@
         position: absolute;
         right: 5px;
         font-weight: 400;
-        @include font-size(15px);
+        @include font-size(13px);
         @media only screen and (min-width: $breakpoint-phone){
             position: unset;
             right: 0;
@@ -62,7 +76,7 @@
     .item-button{
         @include margin(17 0 0 0);
         font-weight: 400;
-        @include font-size(15px);
+        @include font-size(13px);
     }
 
     .btn{
@@ -99,8 +113,8 @@
             font-weight: 400;
             @include font-size(12px);
             @media only screen and (min-width: $breakpoint-phone){
-                @include padding(15 10);
-                @include font-size(14px);
+                @include padding(6 10);
+                @include font-size(13px);
                 font-weight: 300;
             }
         }
@@ -110,9 +124,11 @@
         min-height: 100px;
         background: color('white');
         @include padding(10);
+        text-align: center;
+        box-shadow: 0 -5px 5px -5px #333;
         .btn-checkout{
             @extend .button-design;
-            width: 100%;
+            width: 90%;
             height: 40px;
             @include padding(13);
             border-radius: 6px;
@@ -121,7 +137,7 @@
         p{
             text-align: center;
             font-weight: 400;
-            @include font-size(15px);
+            @include font-size(13px);
         }
     }
     .font-color{
@@ -129,7 +145,6 @@
     }
     .cart-exception{
         background: color('white');
-        min-height: 350px;
         text-align: center;
         @include font-size(22px);
         padding-top: 20%;
@@ -140,12 +155,12 @@
         }
         .btn-start{
             @extend .button-design;
-            width: 100%;
+            width: 90%;
             height: 40px;
             @include padding(13);
             border-radius: 6px;
             text-align: center;
-            margin-top: 39%;
+            @include margin(40 0 40 0);
         }
     }
 }

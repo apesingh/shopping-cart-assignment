@@ -8,14 +8,13 @@ let itemCounter = require('./constant');
 
 
 router.get('/', function (req, res, next) {
-  let productLists = productList.filter(function(category_list){category_list.category});
-
-  res.render('cart', {
-    title: 'cart',
-    prod_List: productLists,
-    productInCart: productInCart,
-    item_counter: itemCounter.item_counter
-  });
+    let productLists = productList.filter(function(category_list){category_list.category});
+    res.render('cart', {
+        title: 'cart',
+        prod_List: productLists,
+        productInCart: productInCart,
+        item_counter: itemCounter.item_counter
+    });
 });
 
 router.get('/allitem', function (req, res) {

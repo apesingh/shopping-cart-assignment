@@ -153,7 +153,6 @@
         @include text-style(color('black'), 400);
         @include font-size(10.8px);
         line-height: 145%;
-        
         @include padding(5);
         height: 88px;
         width: 55%;
@@ -186,10 +185,15 @@
         }
         .purchasing{
             @extend .button-design;
-            width: 100%;
             @include font-size(9px);
             float: right;
+            width: 60%;
+            @include margin(0 0 0 14);
             @include padding(5);
+            @media only screen and (min-width: $breakpoint-large-device) {
+               @include padding(10);
+               width: 100%;
+            }
             .smaller-device{
                 display: inline;
                  color: color('white');

@@ -1,61 +1,64 @@
 <section class="cart-wrapper">
-    <div class="row">
-        <div class="my-cart">
-            <h3 class="font-color">My Cart<span class="font-color">(<i id="item_counter" class="font-color">{{item_counter}}</i> item)</span></h3>
+    <div class="overlay">
+        <div class="row">
+            <div class="my-cart">
+                <h3 class="font-color">My Cart<span class="font-color">(<i id="item_counter" class="font-color">{{item_counter}}</i> item)</span><i class="fa fa-times float-right" aria-hidden="true" onclick="closeCart()"></i></h3>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        {{#if productInCart}}
-        <div class="cart-items">
-            {{#each productInCart}}
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img class="img-cart" src="{{imageURL}}" alt="{{name}}" tabindex="0">
-                    </div>
-                    <div class="item-details">
-                        <div class="items">
-                            <h4>{{name}}</h4>
-                            <div class="item-button">
-                                <button class="btn btn-minus"
-                                    onclick="addRemoveItem('{{id}}', {{@index}},
-                                    {{price}},'minus')">-</button>
-                                <input type="text" readonly tabindex="-1" value="{{count}}"
-                                    class="prod_quantity" id="prod{{@index}}">
-                                <button class="btn btn-plus"
-                                    onclick="addRemoveItem('{{id}}', {{@index}}, {{price}},'plus')">+</button>
-                                <span class="price">Rs.{{price}}</span>
+        <div class="row">
+            {{#if productInCart}}
+            <div class="cart-items">
+                {{#each productInCart}}
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img class="img-cart" src="{{imageURL}}" alt="{{name}}" tabindex="0">
+                        </div>
+                        <div class="item-details">
+                            <div class="items">
+                                <h4>{{name}}</h4>
+                                <div class="item-button">
+                                    <button class="btn btn-minus"
+                                        onclick="addRemoveItem('{{id}}', {{@index}},
+                                        {{price}},'minus')">-</button>
+                                    <input type="text" readonly tabindex="-1" value="{{count}}"
+                                        class="prod_quantity" id="prod{{@index}}">
+                                    <button class="btn btn-plus"
+                                        onclick="addRemoveItem('{{id}}', {{@index}}, {{price}},'plus')">+</button>
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                    <span class="price">Rs.{{price}}</span>
+                                </div>
+                            </div>
+                            <div class="item-total" id="totalp{{@index}}" >
+                                Rs. {{total_price}}
                             </div>
                         </div>
-                        <div class="item-total" id="totalp{{@index}}" >
-                            Rs. {{total_price}}
-                        </div>
                     </div>
+                {{/each}}
+            </div>
+            <div class="product-offer">
+                <div class="offer-image">
+                    <img
+                        src="/images/lowest-price.png"
+                        alt="" tabindex="0">
                 </div>
-            {{/each}}
-        </div>
-        <div class="product-offer">
-            <div class="offer-image">
-                <img
-                    src="/images/lowest-price.png"
-                    alt="" tabindex="0">
+                <div class="offer-heading">
+                    <p>You won't find cheaper
+                        anywhere</p>
+                </div>
             </div>
-            <div class="offer-heading">
-                <p>You won't find cheaper
-                    anywhere</p>
+            <div class="checkout">
+                <p>Promo code can be applied on
+                    payment page</p>
+                <button autofocus class="btn-checkout" onclick="navigateToHome();"><span class="font-color float-left">Proceed to checkout</span><span class="font-color float-right" id="totalCheckoutAmount">Rs. 0</span></button>
             </div>
-        </div>
-        <div class="checkout">
-            <p>Promo code can be applied on
-                payment page</p>
-            <button autofocus class="btn-checkout" onclick="navigateToHome();"><span class="font-color float-left">Proceed to checkout</span><span class="font-color float-right" id="totalCheckoutAmount">Rs. 0</span></button>
-        </div>
-        {{else}}
-            <div class="cart-exception">
-                No Items in the cart
-                <p class="helper-text">You favourite items are just a click away</p>
-                <button class="btn-start" onclick="navigateToProducts();">Start Shopping</button>
-            </div>
+            {{else}}
+                <div class="cart-exception">
+                    <h4>No Items in the cart</h4>
+                    <p class="helper-text">You favourite items are just a click away</p>
+                    <button class="btn-start" onclick="navigateToProducts();">Start Shopping</button>
+                </div>
 
-        {{/if}}
+            {{/if}}
+        </div>
     </div>
 </section>
