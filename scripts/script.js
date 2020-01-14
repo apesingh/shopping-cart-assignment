@@ -26,8 +26,11 @@
             });
     }
     
-    function updateCart(item_counter, cartItems) {
+    function updateCart(item_counter, cartItems, removedId) {
         document.getElementsByClassName("cart-count")[0].innerHTML = item_counter;
+        if(removedId){
+            document.getElementById(removedId).style.display = "none";   
+        }
         if (window.location.pathname == "/product") {
             window.location.href = "/cart";
         }
@@ -46,6 +49,7 @@
     
     if (window.location.pathname === "/cart") {
         request_server();
+        updateCart();
         updateCheckoutAmount();
     }
     
@@ -57,8 +61,7 @@
                 return response.json();
             }
         }).then((myJson) => {
-            console.log("myJson--",myJson);
-            updateCart(myJson.item_counter, myJson.cartItems);
+            updateCart(myJson.item_counter, myJson.cartItems, myJson.productId);
         }); 
  
 
@@ -73,6 +76,7 @@
                 totalCost = input.value * price;
                 document.getElementById("totalp" + index).innerHTML = "Rs."+totalCost;
                 buy(id, 'remove');
+                updateCart();
                 request_server();
             } else { }
         } else if (task == 'plus') {
@@ -127,9 +131,15 @@
     function showMobileMenu() {
       var x = document.getElementById("menuLinks");
       if (x.style.display === "block") {
-        x.style.display = "none";
+        //x.style.display = "none";
+        setTimeout(function(){
+            x.style.display = "none";
+        }, 300);
       } else {
-        x.style.display = "block";
+        //x.style.display = "block";
+            setTimeout(function(){
+                x.style.display = "block";
+            }, 300);
       }
     }
 
@@ -139,17 +149,8 @@
 
     //const closeCart = () => {
     function closeCart() {
-         window.history.back();
+         window.location.href = "/products";
     }
-
-//function myFunction() {
-//    var x = document.getElementById("Demo");
-//    if (x.className.indexOf("display-block") == -1) {
-//        x.className += "display-block";
-//    } else { 
-//        x.className = x.className.replace("display-block", "");
-//    }
-//}
 
 
 function navigateToHome(){

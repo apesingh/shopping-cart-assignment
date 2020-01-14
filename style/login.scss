@@ -67,16 +67,25 @@
 			height: $input-height;
 		}
 		input:focus,
-		input,
-		textarea:focus,
-		textarea {
+		textarea:focus {
 			&+.placeholder {
 				top: 0;
 				cursor: inherit;
 				font-size: $placeholder-font-size-small;
 				color: color('highlightcolor');
 			}
-            @include border-bottom(2px,color('darkgrey'));
+            @include border-bottom(2px,color('highlightcolor'));
+		}
+
+		input,
+		textarea {
+			&+.placeholder {
+				top: 0;
+				cursor: inherit;
+				font-size: $placeholder-font-size-small;
+				color: color('fontgrey');
+			}
+            @include border-bottom(2px,color('darkergrey'));
 		}
 	}
 	.form-button-large {

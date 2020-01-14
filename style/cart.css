@@ -46,12 +46,20 @@
     background: #EAEAEA; }
     @media only screen and (min-width: 768px) {
       .cart-wrapper .overlay {
-        width: 45%;
+        width: 55%;
         right: 10%; } }
   .cart-wrapper .my-cart {
     background: black;
     color: #FFFFFF;
     padding: 10px; }
+    .cart-wrapper .my-cart span {
+      padding: 0px 15px 0px 0px; }
+    .cart-wrapper .my-cart i {
+      cursor: pointer; }
+  .cart-wrapper .multiply {
+    padding: 10px;
+    font-size: 12px;
+    font-size: 0.75rem; }
   .cart-wrapper .cart-items {
     display: inline-block;
     width: 100%; }

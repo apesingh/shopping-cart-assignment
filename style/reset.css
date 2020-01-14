@@ -4,7 +4,7 @@ a, img, ul, li, form, label, footer, header, nav, section {
   margin: 0;
   padding: 0;
   border: 0;
-  color: black;
+  color: #3a3a3a;
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */

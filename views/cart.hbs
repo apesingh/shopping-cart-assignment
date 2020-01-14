@@ -2,14 +2,14 @@
     <div class="overlay">
         <div class="row">
             <div class="my-cart">
-                <h3 class="font-color">My Cart<span class="font-color">(<i id="item_counter" class="font-color">{{item_counter}}</i> item)</span><i class="fa fa-times float-right" aria-hidden="true" onclick="closeCart()"></i></h3>
+                <h3 class="font-color">My Cart<span class="font-color">(<i id="item_counter" class="font-color">{{item_counter}}</i> item)</span><i class="fa fa-times float-right" aria-hidden="true" onclick="navigateToProducts()"></i></h3>
             </div>
         </div>
         <div class="row">
             {{#if productInCart}}
             <div class="cart-items">
                 {{#each productInCart}}
-                    <div class="item-wrapper">
+                    <div class="item-wrapper" id="{{id}}">
                         <div class="item-img">
                             <img class="img-cart" src="{{imageURL}}" alt="{{name}}" tabindex="0">
                         </div>
@@ -24,7 +24,7 @@
                                         class="prod_quantity" id="prod{{@index}}">
                                     <button class="btn btn-plus"
                                         onclick="addRemoveItem('{{id}}', {{@index}}, {{price}},'plus')">+</button>
-                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                    <span class="multiply">x</span>
                                     <span class="price">Rs.{{price}}</span>
                                 </div>
                             </div>

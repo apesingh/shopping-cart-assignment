@@ -8,19 +8,19 @@
                     {{/if}}
                 {{/each}}
             </ul>
-            <div class="dropdown">
-                <button class="dropbtn">Dropdown 
-                  <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                   {{#each categories}}
-                        {{#if this.enabled}}
-                           <a href="/products/{{this.id}}">{{this.name}}</a>
-                        {{/if}}
-                    {{/each}}
-                </div>
-            </div> 
         </aside>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+               {{#each categories}}
+                    {{#if this.enabled}}
+                       <a href="/products/{{this.id}}">{{this.name}}</a>
+                    {{/if}}
+                {{/each}}
+            </div>
+        </div> 
         <section class="product-wrapper">
             {{#each products}}
                 <div class="product position-rel">

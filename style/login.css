@@ -95,18 +95,23 @@
     .login-wrapper .form-input input {
       height: 35px; }
     .login-wrapper .form-input input:focus,
-    .login-wrapper .form-input input,
-    .login-wrapper .form-input textarea:focus,
-    .login-wrapper .form-input textarea {
-      border-bottom: #eeeeee solid 2px; }
+    .login-wrapper .form-input textarea:focus {
+      border-bottom: #01D1C9 solid 2px; }
       .login-wrapper .form-input input:focus + .placeholder,
-      .login-wrapper .form-input input + .placeholder,
-      .login-wrapper .form-input textarea:focus + .placeholder,
-      .login-wrapper .form-input textarea + .placeholder {
+      .login-wrapper .form-input textarea:focus + .placeholder {
         top: 0;
         cursor: inherit;
         font-size: 14px;
         color: #01D1C9; }
+    .login-wrapper .form-input input,
+    .login-wrapper .form-input textarea {
+      border-bottom: #3A3A3A solid 2px; }
+      .login-wrapper .form-input input + .placeholder,
+      .login-wrapper .form-input textarea + .placeholder {
+        top: 0;
+        cursor: inherit;
+        font-size: 14px;
+        color: #3A3A3A; }
   .login-wrapper .form-button-large {
     text-align: center;
     text-decoration: none;

@@ -45,12 +45,11 @@ router.get('/:id/:operation', function (req, res) {
         element.total_price = element.count * element.price;
           if(element.count == 0){
                 let elementIndex = productInCart.indexOf(element);
-                console.log("a",elementIndex);
                 productInCart.splice(elementIndex, 1);
           }
       }
     });
-    res.end(JSON.stringify({ 'cartItems': productInCart, 'item_counter': itemCounter.item_counter }));
+    res.end(JSON.stringify({ 'cartItems': productInCart, 'item_counter': itemCounter.item_counter, 'productId':req.params.id }));
   }
 });
 module.exports = router;
