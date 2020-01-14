@@ -8,7 +8,7 @@
             @include padding(0);
         }
     section {@include padding(0); }
-    
+    //Seprt entity Fix it
         .dropdown {
             display: block;
             float: left;
@@ -90,13 +90,11 @@
         display: inline-block;
         @media only screen and (min-width: $breakpoint-large-device) {
             width: 75%;
-            float: right;
         }
     }
     .product-name{
         overflow: hidden;
         height: 35px;
-        
         @include text-style(color('fontgrey'), 600);
         @include font-size(12px);
         @media only screen and (min-width: $breakpoint-large-device) {
@@ -109,7 +107,7 @@
         min-height: 200px;
         @include margin(8);
         border-bottom: 1px dashed;
-        @include padding(5);
+        @include padding(9);
         position: relative;
         @media only screen and (min-width: $breakpoint-large-device) {
             width: 20%;
@@ -201,7 +199,7 @@
                 @include margin(0 0 0 14);
                width: 45%;
             }
-            .smaller-device{
+            .smaller-device{ // Fix it
                 display: inline;
                  color: color('white');
                 @media only screen and (min-width: $breakpoint-large-device) {

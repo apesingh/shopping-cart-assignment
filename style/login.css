@@ -105,7 +105,7 @@
         color: #01D1C9; }
     .login-wrapper .form-input input,
     .login-wrapper .form-input textarea {
-      border-bottom: #3A3A3A solid 2px; }
+      border-bottom: #6B6B6B solid 2px; }
       .login-wrapper .form-input input + .placeholder,
       .login-wrapper .form-input textarea + .placeholder {
         top: 0;

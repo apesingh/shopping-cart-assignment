@@ -1,29 +1,15 @@
 @import "variables.scss";
 @import "helperClasses.scss";
 
-html {
-    background-color: color('white');
-    color: color('darkergrey');
-    height: 100%;
-    font: {
-        family: 'Dosis', 'Arial', 'sans-serif';
-        size: $mobile-font-size;
-        weight: 300;
-    }
-    text-rendering: optimizeLegibility;
-    @media only screen and (min-width: $breakpoint-phone) {
-        font-size: $desktop-font-size ;
-    }
     .row {
-        zoom: 1; /* For IE 6/7 (trigger hasLayout) */
         max-width: 1140px;
         margin: 0 auto;
-    }
 
-    .row:before,
-    .row:after {
+    &:before,
+    &::after {
         /* content:""; */
         display:table;
+    }
     }
     .row:after {
         clear:both;
@@ -145,7 +131,6 @@ html {
                     li {
                         @include padding(14);
                         @include border-bottom(1px, color('darkergrey'));
-                        text-decoration: none;
                     }
                     li:last-child {
                          @include border-bottom(1px, transparent);
@@ -174,4 +159,3 @@ html {
             }
         }
     }
-}

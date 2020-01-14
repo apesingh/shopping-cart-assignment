@@ -43,6 +43,7 @@
         display: flex;
         background: color('white');
     }
+    
     .item-img{
         width: 20%;
         display: inline-block;
@@ -150,6 +151,7 @@
             @include font-size(13px);
         }
     }
+// Fix it    
     .font-color{
         color: color('white');
     }
@@ -161,7 +163,7 @@
         .helper-text{
             @include font-size(16px);
             @include margin(10 0 0 0);
-            color: #847777;
+            color: #847777; // Fix it
         }
         .btn-start{
             @extend .button-design;

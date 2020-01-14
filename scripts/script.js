@@ -8,6 +8,19 @@
         }
     }
 
+	document.getElementsByTagName("body")[0].addEventListener("keydown", function(e){
+		 if (event.keyCode === 9) {
+             if (event.target['id'] === 'checkout') {
+                event.preventDefault();
+                document.getElementById('close').focus();
+             }
+             if (event.target['id'] === 'shopping') {
+                event.preventDefault();
+                document.getElementById('shopping').focus();
+             }
+		 }
+	})
+
     function request_server() {
         const url = window.location.origin + "/cart/allitem";
         fetch(url)

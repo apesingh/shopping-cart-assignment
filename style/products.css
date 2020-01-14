@@ -110,8 +110,7 @@
     display: inline-block; }
     @media only screen and (min-width: 961px) {
       .products-wrapper .product-wrapper {
-        width: 75%;
-        float: right; } }
+        width: 75%; } }
   .products-wrapper .product-name {
     overflow: hidden;
     height: 35px;
@@ -126,7 +125,7 @@
     min-height: 200px;
     margin: 8px;
     border-bottom: 1px dashed;
-    padding: 5px;
+    padding: 9px;
     position: relative; }
     @media only screen and (min-width: 961px) {
       .products-wrapper .product {
