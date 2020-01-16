@@ -1,0 +1,40 @@
+/* Large devices (laptops/desktops, 961px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*------- MIXIN--------*/
+/*------- EXTEND CLASSES--------*/
+.button-design {
+  background-color: #d10157;
+  color: #FFFFFF;
+  border: 1px solid #d10157;
+  cursor: pointer; }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+.font-white {
+  color: #FFFFFF; }
+
+.img-width {
+  width: 100%; }
+
+html {
+  background-color: #FFFFFF;
+  color: #6B6B6B;
+  height: 100%;
+  font-family: 'Dosis', 'Arial', 'sans-serif';
+  font-size: 16px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility; }
+  @media only screen and (min-width: 768px) {
+    html {
+      font-size: 16px; } }
+
+div:focus, a:focus, img:focus, li:focus, form:focus, label:focus, button:focus, input[type=submit]:focus {
+  border: 1px dashed #E67E22 !important; }
+
+button:focus, input[type=submit]:focus {
+  background-color: #960240 !important; }

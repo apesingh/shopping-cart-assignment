@@ -2,7 +2,7 @@
 @import "helperClasses.scss";
 .login-wrapper {
     @include padding(2 10);
-    @media only screen and (min-width: $breakpoint-phone) {
+    @media only screen and (min-width: $breakpoint-tablet-up) {
         @include padding(0);
     }
 	.login-details {
@@ -13,7 +13,7 @@
         @include margin(50 0 0 0);
 		font-weight: 600;
         @include font-size(15px);
-        @media only screen and (min-width: $breakpoint-phone) {
+        @media only screen and (min-width: $breakpoint-tablet-up) {
             @include font-size(18px);
         }
 	}
@@ -26,7 +26,7 @@
         font-weight: 400;
         @include font-size(12.5px);
         line-height: 130%;
-        @media only screen and (min-width: $breakpoint-phone) {
+        @media only screen and (min-width: $breakpoint-tablet-up) {
             @include font-size(14.5px);
         }
 	}

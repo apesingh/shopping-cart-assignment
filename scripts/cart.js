@@ -4,6 +4,7 @@ let fs = require('fs');
 let obj = fs.readFileSync('./server/products/index.get.json'); 
 let productList = JSON.parse(obj);
 let productInCart = [];
+let removeItem ;
 let itemCounter = require('./constant');
 
 
@@ -46,10 +47,11 @@ router.get('/:id/:operation', function (req, res) {
           if(element.count == 0){
                 let elementIndex = productInCart.indexOf(element);
                 productInCart.splice(elementIndex, 1);
+                removeItem = req.params.id;
           }
       }
     });
-    res.end(JSON.stringify({ 'cartItems': productInCart, 'item_counter': itemCounter.item_counter, 'productId':req.params.id }));
+    res.end(JSON.stringify({ 'cartItems': productInCart, 'item_counter': itemCounter.item_counter, 'productId':removeItem }));
   }
 });
 module.exports = router;

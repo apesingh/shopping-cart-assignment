@@ -18,18 +18,11 @@
 .float-left {
   float: left; }
 
-/*------- SKIP LINK STYLE--------*/
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000000;
-  color: white;
-  padding: 8px;
-  z-index: 100; }
+.font-white {
+  color: #FFFFFF; }
 
-.skip-link:focus {
-  top: 0; }
+.img-width {
+  width: 100%; }
 
 .products-wrapper {
   display: flex;

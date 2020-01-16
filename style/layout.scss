@@ -1,0 +1,42 @@
+@import "helperClasses.scss";
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+    &:before,
+    &:after {
+        /* content:""; */
+        display:table;
+    }
+}
+.row:after {
+    clear:both;
+}
+section {
+    @include padding(20 0);
+    @media only screen and (min-width: $breakpoint-tablet-up) {
+        @include padding(80 0);
+    }
+}
+footer {
+    @include margin(20 0 0 0);
+    @include padding(10 0);
+    @include font-size(10px);
+    color: color('darkergrey');
+    background: color('grey');
+    display: block;
+    width: 100%;
+    .row{
+        text-align: center;
+    }
+    @media only screen and (min-width: $breakpoint-tablet-up) {
+        @include font-size(11px);
+        .row{
+            text-align: left;
+        }
+    }
+}
+nav {
+    width: 100%;
+    display: inline-block;
+}   

@@ -1,63 +1,60 @@
-<section class="cart-wrapper">
+<section class="cart">
     <div class="overlay">
         <div class="row">
-            <div class="my-cart">
-                <h3 class="font-color">My Cart<span class="font-color">(<i id="item_counter" class="font-color">{{item_counter}}</i> item)</span>
+            <div class="cart__header">
+                <h3 class="font-white">My Cart<span>(<i id="item_counter">{{item_counter}}</i> item)</span>
                 </h3>
-                <a href="#" id="close" data-action="close" onclick="navigateToProducts()"><i class="fa fa-times float-right" aria-hidden="true"></i></a>
+                <a href="#" class="font-white float-right" id="close" data-action="close" onclick="navigateToProducts()"><i class="fa fa-times" aria-hidden="true"></i></a>
             </div>
         </div>
         <div class="row">
             {{#if productInCart}}
-            <div class="cart-items">
+            <div class="cart__items">
                 {{#each productInCart}}
                     <div class="item-wrapper" id="{{id}}">
-                        <div class="item-img">
-                            <img class="img-cart" src="{{imageURL}}" alt="{{name}}" tabindex="0">
+                        <div class="item__img">
+                            <img class="img-width" src="{{imageURL}}" alt="{{name}}" tabindex="0">
                         </div>
-                        <div class="item-details">
-                            <div class="items">
+                        <div class="item__details">
+                            <div class="item__name">
                                 <h4>{{name}}</h4>
-                                <div class="item-button">
-                                    <button class="btn btn-minus"
+                                <div class="item__pricing">
+                                    <button class="btn btn--minus"
                                         onclick="addRemoveItem('{{id}}', {{@index}},
                                         {{price}},'minus')">-</button>
                                     <input type="text" readonly tabindex="-1" value="{{count}}"
                                         class="prod_quantity" id="prod{{@index}}">
-                                    <button class="btn btn-plus"
+                                    <button class="btn btn--plus"
                                         onclick="addRemoveItem('{{id}}', {{@index}}, {{price}},'plus')">+</button>
-                                    <span class="multiply">x</span>
+                                    <span class="item--multiply">x</span>
                                     <span class="price">Rs.{{price}}</span>
                                 </div>
                             </div>
-                            <div class="item-total" id="totalp{{@index}}" >
+                            <div class="item__total" id="totalp{{@index}}" >
                                 Rs. {{total_price}}
                             </div>
                         </div>
                     </div>
                 {{/each}}
             </div>
-            <div class="product-offer">
-                <div class="offer-image">
-                    <img
-                        src="/images/lowest-price.png"
-                        alt="" tabindex="0">
+            <div class="cart__offer">
+                <div class="offer__image">
+                    <img class="img-width" src="/images/lowest-price.png" alt="" tabindex="0">
                 </div>
-                <div class="offer-heading">
+                <div class="offer__heading">
                     <p>You won't find cheaper
                         anywhere</p>
                 </div>
             </div>
-            <div class="checkout">
-                <p>Promo code can be applied on
-                    payment page</p>
-                <button autofocus id="shopping" class="btn-checkout" onclick="navigateToHome();"><span class="font-color float-left">Proceed to checkout</span><span class="font-color float-right" id="totalCheckoutAmount">Rs. 0</span></button>
+            <div class="cart__checkout">
+                <p>Promo code can be applied on payment page</p>
+                <button autofocus id="shopping" class="btn__checkout" onclick="navigateToHome();"><span class="font-white float-left">Proceed to checkout</span><span class="font-white float-right" id="totalCheckoutAmount">Rs. 0</span></button>
             </div>
             {{else}}
-                <div class="cart-exception">
+                <div class="cart__exception">
                     <h4>No Items in the cart</h4>
-                    <p class="helper-text">You favourite items are just a click away</p>
-                    <button autofocus id="checkout" class="btn-start" onclick="navigateToProducts();">Start Shopping</button>
+                    <p class="exception__text">You favourite items are just a click away</p>
+                    <button autofocus id="checkout" class="btn__start" onclick="navigateToProducts();">Start Shopping</button>
                 </div>
 
             {{/if}}

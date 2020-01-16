@@ -1,0 +1,27 @@
+@import "helperClasses.scss";
+html {
+    background-color: color('white');
+    color: color('darkergrey');
+    height: 100%;
+    font: {
+        family: 'Dosis', 'Arial', 'sans-serif';
+        size: $mobile-font-size;
+        weight: 300;
+    }
+    text-rendering: optimizeLegibility;
+    @media only screen and (min-width: $breakpoint-tablet-up) {
+        font-size: $desktop-font-size ;
+    }
+}
+
+div, a, img, li, form, label, button, input[type=submit] {
+    &:focus {
+        border: 1px dashed color('orange') !important;
+    }
+}
+button, input[type=submit] {
+    &:focus {
+        background-color: color('buttononclick') !important;
+    }
+}
+

@@ -20,3 +20,28 @@
 
 .img-width {
   width: 100%; }
+
+/*------- SKIP LINK STYLE--------*/
+.skip__link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100; }
+  .skip__link:focus {
+    top: 0; }
+
+/*------- MODAL--------*/
+.overlay {
+  background: #EAEAEA;
+  position: fixed;
+  width: 100%;
+  max-height: 500px;
+  z-index: 200;
+  overflow: auto; }
+  @media only screen and (min-width: 768px) {
+    .overlay {
+      width: 55%;
+      right: 10%; } }

@@ -1,161 +1,129 @@
-@import "variables.scss";
 @import "helperClasses.scss";
-
-    .row {
-        max-width: 1140px;
-        margin: 0 auto;
-
-    &:before,
-    &::after {
-        /* content:""; */
-        display:table;
-    }
-    }
-    .row:after {
-        clear:both;
-    }
-    section {
-        @media only screen and (min-width: $breakpoint-phone) {
-            @include padding(80 0);
-        }
-        @include padding(20 0);
-    }
-    
     .header-wrapper {
         @include border-bottom(3px, color('grey')); 
         @include padding(3 5 0 5);
-        @media only screen and (min-width: $breakpoint-phone) {
-            @include padding(0);
-             
+        @media only screen and (min-width: $breakpoint-tablet-up) {
+            @include padding(0);   
         }
         .row {position: relative;}
-        nav {
-            width: 100%;
+        .brand-logo {
+            width:15%;
             display: inline-block;
-            .brand-logo {
-                width:15%;
-                display: inline-block;
-                float: left;
-                .logo-img {
-                    height: auto;
-                    width: 100%;
-                    @include padding(10);
-                }
+            float: left;
+            img {
+                width: 100%;
+                height: auto;
+                @include padding(10);
             }
-            .nav-bar {
-                display: none; 
-                @media only screen and (min-width: $breakpoint-phone) {
-                    width:25%;
-                    display: inline-block;  
-                    margin-left: 10%;
-                    .main-nav {
-                        float: left;
-                        list-style: none;
-                        @include font-size(12.5px);
-                        @include text-style(color('darkgrey'), 400);
-                        @media only screen and (min-width: $breakpoint-phone) {
-                            margin-top: 22%;
+        }
+        .header__nav {
+            display: none; 
+            @media only screen and (min-width: $breakpoint-tablet-up) {
+                width:25%;
+                display: inline-block;  
+                margin-left: 10%;
+                ul {
+                    @include font-size(12.5px);
+                    @include text-style(color('darkgrey'), 400);
+                    float: left;
+                    list-style: none;
+                    @media only screen and (min-width: $breakpoint-tablet-up) {
+                        margin-top: 22%;
+                    }
+                    li {
+                        display: inline-block;
+                        margin-left: 15px;
+                        @media only screen and (min-width: $breakpoint-tablet-up) {
+                            margin-left: 25px;
                         }
-                        li {
-                            display: inline-block;
-                            margin-left: 15px;
-                            @media only screen and (min-width: $breakpoint-phone) {
-                                margin-left: 25px;
-                            }
-                        }
-                        li:nth-last-child(2) {
+                        &:nth-last-child(2) {
                             position: absolute;
-                            top: 10px;
+                            top: 15px;
                             right: 4rem;
                         }
-                        li:last-child {
+                        &:last-child {
                             position: absolute;
-                            top: 10px;
+                            top: 15px;
                             right: 0;
                         }
-                        li a:link,
-                        li a:visited {
+                        & a:link,
+                        & a:visited {
                             @include padding(8 0);
-                            text-decoration: none;
                             @include border-bottom(1px, transparent); 
-                           
-                            -webkit-transition: border-bottom 0.2s;
+                            text-decoration: none;
                             transition: border-bottom 0.2s;
                         }
 
-                        li a:hover,
-                        li a:active {
+                        & a:hover,
+                        & a:active {
                             @include border-bottom(1px, color('orange')); 
                         }
-                    }
+                    } 
                 }
             }
-            .cart-container {
+        }
+        .header__cart {
+            @include font-size(10px);
+            @include margin(10 40 0 0);
+            @include text-style(color('darkgrey'), 400);
+            width: 30%;
+            display: inline-block;
+            text-align: right;
+            float: right;
+            @media only screen and (min-width: $breakpoint-tablet-up) {
+                @include font-size(11.5px);
+                @include margin(43 0 0 0);
                 width: 30%;
+            }
+            a {
+                @include padding(8);
+                background: color('grey');
+                text-align: center;                       
                 display: inline-block;
-                text-align: right;
-                float: right;
-                @include font-size(10px);
-                @include margin(10 40 0 0);
-                @include text-style(color('darkgrey'), 400);
-                @media only screen and (min-width: $breakpoint-phone) {
-                    width: 30%;
-                    @include font-size(11.5px);
-                    @include margin(43 0 0 0);
-
-                }
-                a {
-                    background: color('grey');
-                    @include padding(8);
-                    @media only screen and (min-width: $breakpoint-phone) {
-                        @include padding(14 24);
-                    }
-                    text-align: center;                       
-                    display: inline-block;
+                @media only screen and (min-width: $breakpoint-tablet-up) {
+                    @include padding(14 24);
                 }
             }
-            #menuLinks {
-                width: 100%; 
-                overflow: hidden;
-                background-color: color('grey');
-                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                z-index: 1;
+        }
+        .header__mob {
+            width: 100%; 
+            overflow: hidden;
+            background-color: color('grey');
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            display: none;
+            @media only screen and (min-width: $breakpoint-tablet-up) {
                 display: none;
-                @media only screen and (min-width: $breakpoint-phone) {
-                    display: none;
-                }
-                .menu-list {
-                    @include text-style(color('black'), 400);
-                    @include font-size(12.5px);
-                    cursor: pointer;
-                    li {
-                        @include padding(14);
-                        @include border-bottom(1px, color('darkergrey'));
-                    }
-                    li:last-child {
+            }
+            ul {
+                @include text-style(color('black'), 400);
+                @include font-size(12.5px);
+                cursor: pointer;
+                li {
+                    @include padding(14);
+                    @include border-bottom(1px, color('darkergrey'));
+                    &:last-child {
                          @include border-bottom(1px, transparent);
                     }
                 }
             }
-            /* Style the hamburger menu */
-            .icon {
+        }
+        .header__hamburger {
+                @include text-style(color('darkergrey'), 400);
+                @include margin(14 0 0 0);
                 display: block;
                 position: absolute;
                 right: 0;
                 top: 0;
-                @include text-style(color('darkergrey'), 400);
-                @include margin(14 0 0 0);
-                -webkit-transition: display 0.2s;
                 transition: display 0.2s;
-                @media only screen and (min-width: $breakpoint-phone) {
+                @media only screen and (min-width: $breakpoint-tablet-up) {
                     display: none;
                 }
                 .fa {
                    @include font-size(30px); 
                 }
-            }
-            .fa-shopping-cart {
+        }
+        .fa-shopping-cart {
                 color: color('buttoncolor');
-            }
         }
     }

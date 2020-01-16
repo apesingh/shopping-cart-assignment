@@ -1,33 +1,17 @@
 @import "base.scss";
+@import "layout.scss";
+@import "module.scss";
 @import "header.scss";
 @import "login.scss" ;
 @import "home.scss";
 @import "products.scss";
 @import "cart.scss";
 #bg-overlay{
-    position: fixed;
     background:  color('darkergrey');
+    position: fixed;
     width: 100%;
     height: 100%;
     z-index: 10;
     opacity: .9;
     display: none;
 }
-footer {
-    @include margin(20 0 0 0);
-    background: color('grey');
-    display: block;
-    width: 100%;
-    @include padding(10 0);
-    @include font-size(10px);
-    color: color('darkergrey');
-    .row{
-        text-align: center;
-    }
-    @media only screen and (min-width: $breakpoint-phone) {
-        @include font-size(11px);
-        .row{
-            text-align: left;
-        }
-    }
-  }
