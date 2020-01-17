@@ -32,11 +32,11 @@
   position: relative; }
 
 .banner-wrapper .dots {
+  z-index: 50;
   position: absolute;
   text-align: center;
   width: 100%;
-  bottom: 0px;
-  z-index: 5; }
+  bottom: 0px; }
 
 .banner-wrapper .dot {
   cursor: pointer;

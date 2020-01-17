@@ -3,7 +3,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*------- MIXIN--------*/
 /*------- EXTEND CLASSES--------*/
-.button-design {
+.button-design, .dropdown .dropbtn {
   background-color: #d10157;
   color: #FFFFFF;
   border: 1px solid #d10157;
@@ -28,29 +28,70 @@
   left: 0;
   background: #000000;
   color: white;
-  padding: 8px;
-  z-index: 100; }
+  padding: 8px; }
   .skip__link:focus {
     top: 0; }
 
 /*------- MODAL--------*/
 #bg-overlay {
+  z-index: 200;
   background: #6B6B6B;
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 10;
   opacity: .9;
   display: none; }
 
 .overlay {
+  z-index: 300;
   background: #EAEAEA;
   position: fixed;
   width: 100%;
   max-height: 500px;
-  z-index: 200;
   overflow: auto; }
   @media only screen and (min-width: 768px) {
     .overlay {
       width: 55%;
       right: 10%; } }
+
+/*------- DROPDOWN--------*/
+.dropdown {
+  display: block;
+  float: left;
+  width: 100%;
+  overflow: hidden; }
+  @media only screen and (min-width: 961px) {
+    .dropdown {
+      display: none; } }
+  .dropdown .dropbtn {
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin: 0px;
+    outline: none;
+    width: 100%; }
+  .dropdown .dropdown-content {
+    z-index: 40;
+    display: none;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(238, 238, 238, 0.867);
+    min-width: 160px;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
+    .dropdown .dropdown-content a {
+      float: none;
+      padding: 12px 16px;
+      border-bottom: #6B6B6B solid 1px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      color: #3A3A3A;
+      font-weight: 400;
+      font-size: 12.5px;
+      font-size: 0.78125rem; }
+    .dropdown .dropdown-content a:hover {
+      border-bottom: #E67E22 solid 1px; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }

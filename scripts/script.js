@@ -16,7 +16,7 @@
              }
              if (event.target['id'] === 'shopping') {
                 event.preventDefault();
-                document.getElementById('shopping').focus();
+                document.getElementById('close').focus();
              }
 		 }
 	})

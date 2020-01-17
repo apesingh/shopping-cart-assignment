@@ -1,42 +1,44 @@
-<div class="products-wrapper">
-    <div class="row">
-        <aside>
-            <ul class="categories-wrapper">
-                {{#each categories}}
-                    {{#if this.enabled}}
-                        <li class="category-name"><a href="/products/{{this.id}}">{{this.name}}</a></li>
-                    {{/if}}
-                {{/each}}
-            </ul>
-        </aside>
-        <div class="dropdown">
-            <button class="dropbtn">Dropdown 
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-               {{#each categories}}
-                    {{#if this.enabled}}
-                       <a href="/products/{{this.id}}">{{this.name}}</a>
-                    {{/if}}
-                {{/each}}
-            </div>
-        </div> 
-        <section class="product-wrapper">
-            {{#each products}}
-                <div class="product position-rel">
-                    <div class="product-name" title="{{this.name}}">{{this.name}}</div>
-                    <div class="product-image">
-                        <img class="pro-img" src="{{this.imageURL}}" alt="{{this.name}}">
-                    </div>
-                    <div class="product-description" title="{{this.description}}"><p>{{this.description}}</p></div>
-                    <div class="pricing-purchasing">
-                        <div class="pricing">MRP Rs {{this.price}}</div>
-                        <button class="purchasing" onclick="buy('{{this.id}}', 'add')">Buy now<span class="smaller-device">@ {{this.price}}</span></button>                        
-                    </div>
-                    <div class="mask position-abs">
-                    </div>
+<main id="mainContent">  
+    <div class="product">
+        <div class="row">
+            <aside>
+                <ul class="product__category">
+                    {{#each categories}}
+                        {{#if this.enabled}}
+                            <li class="category__name"><a href="/products/{{this.id}}">{{this.name}}</a></li>
+                        {{/if}}
+                    {{/each}}
+                </ul>
+            </aside>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                   {{#each categories}}
+                        {{#if this.enabled}}
+                           <a href="/products/{{this.id}}">{{this.name}}</a>
+                        {{/if}}
+                    {{/each}}
                 </div>
-            {{/each}}
-        </section>
+            </div> 
+            <section class="product__wrapper">
+                {{#each products}}
+                    <div class="product__detail position-rel">
+                        <div class="product__name" title="{{this.name}}">{{this.name}}</div>
+                        <div class="product__image">
+                            <img src="{{this.imageURL}}" alt="{{this.name}}">
+                        </div>
+                        <div class="product__description" title="{{this.description}}"><p>{{this.description}}</p></div>
+                        <div class="product__purchasing">
+                            <div class="product__pricing">MRP Rs {{this.price}}</div>
+                            <button class="product__buy" onclick="buy('{{this.id}}', 'add')">Buy now<span class="buy__product">@ {{this.price}}</span></button>                        
+                        </div>
+                        <div class="mask position-abs">
+                        </div>
+                    </div>
+                {{/each}}
+            </section>
+        </div>
     </div>
-</div>
+</main>

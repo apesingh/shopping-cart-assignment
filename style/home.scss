@@ -11,11 +11,12 @@
         }
     }
     .dots{
+        @include z-index('slider-dot');
         position: absolute;
         text-align: center;
         width: 100%;
         bottom: 0px;
-        z-index: 5;
+        //z-index: 5;
     }
     .dot {
         cursor: pointer;

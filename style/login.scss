@@ -40,10 +40,11 @@
 			min-height: $input-height + $input-top;
 		}
 		.placeholder {
+            @include z-index('placeholder');
 			position: absolute;
 			display: block;
 			top: ($input-height / 2) + $placeholder-padding;
-			z-index: 2;
+			//z-index: 2;
 			color: color('highlightcolor');
 			font-size: $placeholder-font-size;
 			transition: all $placeholder-transition;
@@ -51,9 +52,10 @@
 			cursor: text;
 		}
 		input {
+            @include z-index('input');
 			position: absolute;
 			top: $input-top;
-			z-index: 1;
+			//z-index: 1;
 			width: 100%;
 			font-size: $input-font-size;
 			border: 0;

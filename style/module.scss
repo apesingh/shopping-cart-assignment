@@ -2,13 +2,14 @@
 
 /*------- SKIP LINK STYLE--------*/
 .skip__link {
+    
     position: absolute;
     top: -40px;
     left: 0;
     background: #000000;
     color: white;
     padding: 8px;
-    z-index: 100;
+    //z-index: 100;
     &:focus {
         top: 0;
     }
@@ -16,23 +17,72 @@
 
 /*------- MODAL--------*/
 #bg-overlay{
+    @include z-index('bg-overlay');
     background:  color('darkergrey');
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 10;
+    //z-index: 10;
     opacity: .9;
     display: none;
 }
 .overlay{
+    @include z-index('modal');
     background: color('lightbackground');
     position: fixed;
     width: 100%;
     max-height: 500px;
-    z-index: 200;
+    //z-index: 300;
     overflow: auto;
     @media only screen and (min-width: $breakpoint-tablet-up){
         width: 55%;
         right: 10%;
     }
 } 
+
+/*------- DROPDOWN--------*/
+.dropdown {
+    display: block;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    @media only screen and (min-width: $breakpoint-large-device) {
+        display: none;
+    }
+    .dropbtn {
+        @extend .button-design;
+        @include font-size(18px);
+        @include margin(0);
+        outline: none;
+        width: 100%;
+    }
+
+    .dropdown-content {
+        @include z-index('category-list');
+        display: none;
+        width: 100%;
+        position: absolute;
+        background-color: color('grey');
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        //z-index: 1;
+        a {
+            float: none;
+            @include padding(12 16);
+            @include border-bottom(1px,color('darkergrey'));
+            text-decoration: none;
+            display: block;
+            text-align: left;
+
+            @include text-style(color('fontgrey'), 400);
+            @include font-size(12.5px);
+        }
+        a:hover {
+            @include border-bottom(1px, color('orange'));
+        }
+    }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

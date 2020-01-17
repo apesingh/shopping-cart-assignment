@@ -27,6 +27,27 @@ $theme-colors: (
     }
 }
 
+// Z-index
+$z-index: (
+    'skip-link'     : 100,
+    'bg-overlay'    : 200,
+    'modal'         : 300,
+    'mob-nav'       : 90,
+    'slider-dot'    : 50,
+    'category-list' : 40,
+    'placeholder'   : 2,
+    'input'         : 1
+);
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}
+
+
 $mobile-font-size: 16px;
 $desktop-font-size: 16px;
 

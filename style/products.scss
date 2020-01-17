@@ -1,125 +1,148 @@
-@import "variables.scss";
 @import "helperClasses.scss";
-.products-wrapper{
-        display: flex;
-        width: 100%;
-        @include padding(20 0);
-        @media only screen and (min-width: $breakpoint-large-device) {
-            @include padding(0);
-        }
+.product {
+    @include padding(20 0);
+    display: flex;
+    width: 100%;
+    @media only screen and (min-width: $breakpoint-large-device) {
+        @include padding(0);
+    }
     section {@include padding(0); }
-    //Seprt entity Fix it
-        .dropdown {
+    .product__category {
+        display: none;
+        height: 100%;
+        @media only screen and (min-width: $breakpoint-large-device) {
             display: block;
-            float: left;
-            width: 100%;
-            overflow: hidden;
-            @media only screen and (min-width: $breakpoint-large-device) {
-                display: none;
-            }
-            .dropbtn {
-                @extend .button-design;
-                @include font-size(18px);
-                @include margin(0);
-                outline: none;
-                width: 100%;
-            }
-
-            .dropdown-content {
-                display: none;
-                width: 100%;
-                position: absolute;
-                background-color: color('grey');
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-                a {
-                    float: none;
-                    @include padding(12 16);
-                    @include border-bottom(1px,color('darkergrey'));
-                    text-decoration: none;
-                    display: block;
-                    text-align: left;
-                    
-                    @include text-style(color('fontgrey'), 400);
-                    @include font-size(12.5px);
-                }
-                a:hover {
-                    @include border-bottom(1px, color('orange'));
-                }
-            }
         }
-
-        .dropdown:hover .dropdown-content {
-          display: block;
-        }
-      aside {  
-            height: 100%;
-            display: inline;
-        .categories-wrapper{
-            display: none;
-            height: 100%;
-            @media only screen and (min-width: $breakpoint-large-device) {
-                display: block;
-            }
-            background: color('grey');
-            @include padding(15 0);
-            float: left;
-            width: 25%;
-            .category-name{
-                @include text-style(color('fontgrey'), 400);
-                @include font-size(12.5px);
-                @include padding(14);
-                @include border-bottom(1px, color('midgrey'));
-                cursor: pointer;
-                text-decoration: none;
-            }
-            li a:hover,
-            li a:active {
+        background: color('grey');
+        @include padding(15 0);
+        float: left;
+        width: 25%;
+        .category__name {
+            @include text-style(color('fontgrey'), 400);
+            @include font-size(12.5px);
+            @include padding(14);
+            @include border-bottom(1px, color('midgrey'));
+            cursor: pointer;
+            text-decoration: none;
+            &a:hover,
+            &a:active {
                 @include border-bottom(1px, color('orange'));
             }
-            li:last-child {
+            &:last-child {
                 @include border-bottom(1px, transparent);
             }
         }
     }
     
-    .product-wrapper{
-        width: 100%;
+    .product__wrapper {
         @include margin(20 0 0 0);
+        width: 100%;
         display: inline-block;
         @media only screen and (min-width: $breakpoint-large-device) {
             width: 75%;
         }
-    }
-    .product-name{
-        overflow: hidden;
-        height: 35px;
-        @include text-style(color('fontgrey'), 600);
-        @include font-size(12px);
-        @media only screen and (min-width: $breakpoint-large-device) {
-            height: 60px;
+        .product__detail {
+            @include margin(8);
+            @include padding(9);
+            min-height: 200px;
+            border-bottom: 1px dashed;
+            position: relative;
+            @media only screen and (min-width: $breakpoint-large-device) {
+                width: 20%;
+                min-height: 350px;
+                float: left;
+            }
+            @media only screen and (min-width: 401px) and (max-width: 960px) {
+                width: 45%;
+                min-height: 200px;
+                float: left;
+            }
+            .product__name {
+                @include text-style(color('fontgrey'), 600);
+                @include font-size(12px);
+                overflow: hidden;
+                height: 35px;
+            }
+            .product__image {
+                @include margin(0);
+                width: 35%;
+                min-height: 100px;
+                display: inline-block;
+                @media only screen and (min-width: $breakpoint-large-device) {
+                    margin-top: 15px;
+                    width: 75%;
+                    min-height: 130px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                > img{
+                    width: 100%;
+                    @media only screen and (min-width: $breakpoint-large-device) {
+                        width: 100%;
+                        float: none;
+                    }
+                }
+            }
+            .product__description {
+                @include text-style(color('fontgrey'), 400);
+                @include font-size(10.8px);
+                @include padding(5);
+                @include margin(0);
+                background: color('grey');
+                line-height: 145%;
+                width: 55%;
+                position: absolute;
+                display: inline-block;
+                @media only screen and (min-width: $breakpoint-large-device) {
+                    @include margin(5 0 0 0);
+                    width: 100%;
+                    position: unset;
+                    height: 88px;
+                }
+                p {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;  
+                    overflow: hidden;
+                }
+            }
+            .product__purchasing {
+                 @include margin(10 0 0 0)
+                .product__pricing{
+                    @include font-size(11px);
+                    @include margin(5 0 0 0);
+                    float: left;
+                    width: 45%;
+                    display: none;
+                    @media only screen and (min-width: $breakpoint-large-device) {
+                        display: block;
+                        width: 45%;
+                    }
+                }
+                .product__buy{
+                    @extend .button-design;
+                    @include font-size(9px);
+                    @include margin(0 17 0 0);
+                    @include padding(5);
+                    float: right;
+                    width: 60%;
+                    @media only screen and (min-width: $breakpoint-large-device) {
+                        @include padding(10 0 10 0);
+                        @include margin(0 0 0 14);
+                        width: 45%;
+                    }   
+                    .buy__product {
+                        display: inline;
+                        color: color('white');
+                        @media only screen and (min-width: $breakpoint-large-device) {
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
-        //text-overflow: ellipsis;
-        //white-space: nowrap;
     }
-    .product{
-        min-height: 200px;
-        @include margin(8);
-        border-bottom: 1px dashed;
-        @include padding(9);
-        position: relative;
-        @media only screen and (min-width: $breakpoint-large-device) {
-            width: 20%;
-            min-height: 300px;
-            float: left;
-        }
-        @media only screen and (min-width: 401px) and (max-width: 960px) {
-            width: 45%;
-            min-height: 300px;
-            float: left;
-        }
-    }
+
     .mask{
         background: color('grey');
         width: 1%;
@@ -131,81 +154,6 @@
         @media only screen and (min-width: $breakpoint-large-device) {
             height: 234px;
             display: block;
-        }
-    }
-    .product-image{
-        @include margin(0);
-        width: 35%;
-        display: inline-block;
-        @media only screen and (min-width: $breakpoint-large-device) {
-            margin-top: 15px;
-            width: 75%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .pro-img{
-            width: 100%;
-            @media only screen and (min-width: $breakpoint-large-device) {
-                width: 100%;
-                float: none;
-            }
-        }
-    }
-    .product-description{
-        background: color('grey');
-        @include text-style(color('fontgrey'), 400);
-        @include font-size(10.8px);
-        line-height: 145%;
-        @include padding(5);
-        height: 88px;
-        width: 55%;
-        @include margin(0);
-        position: absolute;
-        display: inline-block;
-        @media only screen and (min-width: $breakpoint-large-device) {
-            width: 100%;
-            @include margin(5 0 0 0);
-            position: unset;
-        }
-        p {
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;  
-            overflow: hidden;
-        }
-    }
-    .pricing-purchasing{
-         @include margin(10 0 0 0)
-        .pricing{
-            @include font-size(11px);
-            float: left;
-            @include margin(5 0 0 0);
-            width: 45%;
-            display: none;
-            @media only screen and (min-width: $breakpoint-large-device) {
-                display: block;
-                width: 45%;
-            }
-        }
-        .purchasing{
-            @extend .button-design;
-            @include font-size(9px);
-            float: right;
-            @include margin(0 17 0 0);
-            width: 60%;
-            @include padding(5);
-            @media only screen and (min-width: $breakpoint-large-device) {
-               @include padding(10 0 10 0);
-                @include margin(0 0 0 14);
-               width: 45%;
-            }
-            .smaller-device{ // Fix it
-                display: inline;
-                 color: color('white');
-                @media only screen and (min-width: $breakpoint-large-device) {
-                    display: none;
-                }
-            }
         }
     }
 }

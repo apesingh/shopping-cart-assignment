@@ -12,11 +12,19 @@
 .row:after {
     clear:both;
 }
+nav {
+    width: 100%;
+    display: inline-block;
+}   
 section {
     @include padding(20 0);
     @media only screen and (min-width: $breakpoint-tablet-up) {
         @include padding(80 0);
     }
+}
+aside {  
+    height: 100%;
+    display: inline;
 }
 footer {
     @include margin(20 0 0 0);
@@ -36,7 +44,3 @@ footer {
         }
     }
 }
-nav {
-    width: 100%;
-    display: inline-block;
-}   
