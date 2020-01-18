@@ -3,7 +3,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*------- MIXIN--------*/
 /*------- EXTEND CLASSES--------*/
-.button-design, .login .form-button-large {
+.button-design {
   background-color: #d10157;
   color: #FFFFFF;
   border: 1px solid #d10157;
@@ -86,41 +86,3 @@
       cursor: inherit;
       font-size: 14px;
       color: #3A3A3A; }
-
-.login {
-  padding: 2px 10px; }
-  @media only screen and (min-width: 768px) {
-    .login {
-      padding: 0px; } }
-  .login__details {
-    padding: 0px 0px 0px 15px;
-    margin: 50px 0px 0px 0px;
-    font-size: 15px;
-    font-size: 0.9375rem;
-    width: 50%;
-    display: inline-block;
-    float: left;
-    font-weight: 600; }
-    @media only screen and (min-width: 768px) {
-      .login__details {
-        font-size: 18px;
-        font-size: 1.125rem; } }
-    .login__details .login__details-text {
-      margin: 14px 0px 0px 0px;
-      font-size: 12.5px;
-      font-size: 0.78125rem;
-      font-weight: 400;
-      line-height: 130%; }
-      @media only screen and (min-width: 768px) {
-        .login__details .login__details-text {
-          font-size: 14.5px;
-          font-size: 0.90625rem; } }
-  .login__form {
-    width: 35%;
-    display: inline-block; }
-  .login .form-button-large {
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px;
-    width: 100%; }

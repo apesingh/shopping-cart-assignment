@@ -7,7 +7,7 @@
         @include padding(0);
     }
     section {@include padding(0); }
-    .product__category {
+    &__category {
         display: none;
         height: 100%;
         @media only screen and (min-width: $breakpoint-large-device) {
@@ -34,14 +34,14 @@
         }
     }
     
-    .product__wrapper {
+    &__wrapper {
         @include margin(20 0 0 0);
         width: 100%;
         display: inline-block;
         @media only screen and (min-width: $breakpoint-large-device) {
             width: 75%;
         }
-        .product__detail {
+        .article {
             @include margin(8);
             @include padding(9);
             min-height: 200px;
@@ -57,13 +57,13 @@
                 min-height: 200px;
                 float: left;
             }
-            .product__name {
+            &__name {
                 @include text-style(color('fontgrey'), 600);
                 @include font-size(12px);
                 overflow: hidden;
                 height: 35px;
             }
-            .product__image {
+            &__image {
                 @include margin(0);
                 width: 35%;
                 min-height: 100px;
@@ -83,7 +83,7 @@
                     }
                 }
             }
-            .product__description {
+            &__description {
                 @include text-style(color('fontgrey'), 400);
                 @include font-size(10.8px);
                 @include padding(5);
@@ -106,7 +106,7 @@
                     overflow: hidden;
                 }
             }
-            .product__purchasing {
+            &__purchasing {
                  @include margin(10 0 0 0)
                 .product__pricing{
                     @include font-size(11px);

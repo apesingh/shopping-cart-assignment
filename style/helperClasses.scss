@@ -19,17 +19,27 @@
   }
 }
 
-.float-right{
+.float--right{
     float: right;
 }
-.float-left{
+.float--left{
     float: left;
 }
 
-.font-white {
+.font--white {
     color: color('white');
 }
 
-.img-width {
+.width--100 {
     width: 100%;
+}
+.align--center {
+    text-align: center;
+}
+.align--left {
+    text-align: left;
+}
+.image--width{
+    width: 100%;
+    height:auto;
 }

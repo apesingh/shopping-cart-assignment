@@ -24,17 +24,17 @@
             </div> 
             <section class="product__wrapper">
                 {{#each products}}
-                    <div class="product__detail position-rel">
-                        <div class="product__name" title="{{this.name}}">{{this.name}}</div>
-                        <div class="product__image">
+                    <div class="article">
+                        <div class="article__name" title="{{this.name}}">{{this.name}}</div>
+                        <div class="article__image">
                             <img src="{{this.imageURL}}" alt="{{this.name}}">
                         </div>
-                        <div class="product__description" title="{{this.description}}"><p>{{this.description}}</p></div>
-                        <div class="product__purchasing">
+                        <div class="article__description" title="{{this.description}}"><p>{{this.description}}</p></div>
+                        <div class="article__purchasing">
                             <div class="product__pricing">MRP Rs {{this.price}}</div>
                             <button class="product__buy" onclick="buy('{{this.id}}', 'add')">Buy now<span class="buy__product">@ {{this.price}}</span></button>                        
                         </div>
-                        <div class="mask position-abs">
+                        <div class="mask">
                         </div>
                     </div>
                 {{/each}}

@@ -9,17 +9,27 @@
   border: 1px solid #d10157;
   cursor: pointer; }
 
-.float-right {
+.float--right {
   float: right; }
 
-.float-left {
+.float--left {
   float: left; }
 
-.font-white {
+.font--white {
   color: #FFFFFF; }
 
-.img-width {
+.width--100 {
   width: 100%; }
+
+.align--center {
+  text-align: center; }
+
+.align--left {
+  text-align: left; }
+
+.image--width {
+  width: 100%;
+  height: auto; }
 
 html, body, div, span,
 h1, h2, h3, h4, h5, h6, p,

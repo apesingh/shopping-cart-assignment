@@ -1,5 +1,5 @@
 @import "helperClasses.scss";
-    .header-wrapper {
+    .header {
         @include border-bottom(3px, color('grey')); 
         @include padding(3 5 0 5);
         @media only screen and (min-width: $breakpoint-tablet-up) {
@@ -16,7 +16,7 @@
                 @include padding(10);
             }
         }
-        .header__nav {
+        &__nav {
             display: none; 
             @media only screen and (min-width: $breakpoint-tablet-up) {
                 width:25%;
@@ -62,7 +62,7 @@
                 }
             }
         }
-        .header__cart {
+        &__cart {
             @include font-size(10px);
             @include margin(10 40 0 0);
             @include text-style(color('darkgrey'), 400);
@@ -84,7 +84,7 @@
                 }
             }
         }
-        .header__mob {
+        &__mob {
             @include z-index('mob-nav');
             width: 100%; 
             overflow: hidden;
@@ -108,7 +108,7 @@
                 }
             }
         }
-        .header__hamburger {
+        &__hamburger {
                 @include text-style(color('darkergrey'), 400);
                 @include margin(14 0 0 0);
                 display: block;

@@ -3,23 +3,33 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*------- MIXIN--------*/
 /*------- EXTEND CLASSES--------*/
-.button-design, .product .product__wrapper .product__detail .product__purchasing .product__buy {
+.button-design, .product__wrapper .article__purchasing .product__buy {
   background-color: #d10157;
   color: #FFFFFF;
   border: 1px solid #d10157;
   cursor: pointer; }
 
-.float-right {
+.float--right {
   float: right; }
 
-.float-left {
+.float--left {
   float: left; }
 
-.font-white {
+.font--white {
   color: #FFFFFF; }
 
-.img-width {
+.width--100 {
   width: 100%; }
+
+.align--center {
+  text-align: center; }
+
+.align--left {
+  text-align: left; }
+
+.image--width {
+  width: 100%;
+  height: auto; }
 
 .product {
   padding: 20px 0px;
@@ -34,7 +44,7 @@
       padding: 0px; } }
   .product section {
     padding: 0px; }
-  .product .product__category {
+  .product__category {
     display: none;
     height: 100%;
     background: rgba(238, 238, 238, 0.867);
@@ -42,9 +52,9 @@
     float: left;
     width: 25%; }
     @media only screen and (min-width: 961px) {
-      .product .product__category {
+      .product__category {
         display: block; } }
-    .product .product__category .category__name {
+    .product__category .category__name {
       color: #3A3A3A;
       font-weight: 400;
       font-size: 12.5px;
@@ -53,59 +63,59 @@
       border-bottom: #D8DCE3 solid 1px;
       cursor: pointer;
       text-decoration: none; }
-      .product .product__category .category__namea:hover, .product .product__category .category__namea:active {
+      .product__category .category__namea:hover, .product__category .category__namea:active {
         border-bottom: #E67E22 solid 1px; }
-      .product .product__category .category__name:last-child {
+      .product__category .category__name:last-child {
         border-bottom: transparent solid 1px; }
-  .product .product__wrapper {
+  .product__wrapper {
     margin: 20px 0px 0px 0px;
     width: 100%;
     display: inline-block; }
     @media only screen and (min-width: 961px) {
-      .product .product__wrapper {
+      .product__wrapper {
         width: 75%; } }
-    .product .product__wrapper .product__detail {
+    .product__wrapper .article {
       margin: 8px;
       padding: 9px;
       min-height: 200px;
       border-bottom: 1px dashed;
       position: relative; }
       @media only screen and (min-width: 961px) {
-        .product .product__wrapper .product__detail {
+        .product__wrapper .article {
           width: 20%;
           min-height: 350px;
           float: left; } }
       @media only screen and (min-width: 401px) and (max-width: 960px) {
-        .product .product__wrapper .product__detail {
+        .product__wrapper .article {
           width: 45%;
           min-height: 200px;
           float: left; } }
-      .product .product__wrapper .product__detail .product__name {
+      .product__wrapper .article__name {
         color: #3A3A3A;
         font-weight: 600;
         font-size: 12px;
         font-size: 0.75rem;
         overflow: hidden;
         height: 35px; }
-      .product .product__wrapper .product__detail .product__image {
+      .product__wrapper .article__image {
         margin: 0px;
         width: 35%;
         min-height: 100px;
         display: inline-block; }
         @media only screen and (min-width: 961px) {
-          .product .product__wrapper .product__detail .product__image {
+          .product__wrapper .article__image {
             margin-top: 15px;
             width: 75%;
             min-height: 130px;
             margin-left: auto;
             margin-right: auto; } }
-        .product .product__wrapper .product__detail .product__image > img {
+        .product__wrapper .article__image > img {
           width: 100%; }
           @media only screen and (min-width: 961px) {
-            .product .product__wrapper .product__detail .product__image > img {
+            .product__wrapper .article__image > img {
               width: 100%;
               float: none; } }
-      .product .product__wrapper .product__detail .product__description {
+      .product__wrapper .article__description {
         color: #3A3A3A;
         font-weight: 400;
         font-size: 10.8px;
@@ -118,19 +128,19 @@
         position: absolute;
         display: inline-block; }
         @media only screen and (min-width: 961px) {
-          .product .product__wrapper .product__detail .product__description {
+          .product__wrapper .article__description {
             margin: 5px 0px 0px 0px;
             width: 100%;
             position: unset;
             height: 88px; } }
-        .product .product__wrapper .product__detail .product__description p {
+        .product__wrapper .article__description p {
           display: -webkit-box;
           -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
           overflow: hidden; }
-      .product .product__wrapper .product__detail .product__purchasing {
+      .product__wrapper .article__purchasing {
         margin: 10px 0px 0px 0px; }
-        .product .product__wrapper .product__detail .product__purchasing .product__pricing {
+        .product__wrapper .article__purchasing .product__pricing {
           font-size: 11px;
           font-size: 0.6875rem;
           margin: 5px 0px 0px 0px;
@@ -138,10 +148,10 @@
           width: 45%;
           display: none; }
           @media only screen and (min-width: 961px) {
-            .product .product__wrapper .product__detail .product__purchasing .product__pricing {
+            .product__wrapper .article__purchasing .product__pricing {
               display: block;
               width: 45%; } }
-        .product .product__wrapper .product__detail .product__purchasing .product__buy {
+        .product__wrapper .article__purchasing .product__buy {
           font-size: 9px;
           font-size: 0.5625rem;
           margin: 0px 17px 0px 0px;
@@ -149,15 +159,15 @@
           float: right;
           width: 60%; }
           @media only screen and (min-width: 961px) {
-            .product .product__wrapper .product__detail .product__purchasing .product__buy {
+            .product__wrapper .article__purchasing .product__buy {
               padding: 10px 0px 10px 0px;
               margin: 0px 0px 0px 14px;
               width: 45%; } }
-          .product .product__wrapper .product__detail .product__purchasing .product__buy .buy__product {
+          .product__wrapper .article__purchasing .product__buy .buy__product {
             display: inline;
             color: #FFFFFF; }
             @media only screen and (min-width: 961px) {
-              .product .product__wrapper .product__detail .product__purchasing .product__buy .buy__product {
+              .product__wrapper .article__purchasing .product__buy .buy__product {
                 display: none; } }
   .product .mask {
     background: rgba(238, 238, 238, 0.867);

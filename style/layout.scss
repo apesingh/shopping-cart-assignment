@@ -8,9 +8,9 @@
         /* content:""; */
         display:table;
     }
-}
-.row:after {
-    clear:both;
+    &:after {
+        clear:both;
+    }
 }
 nav {
     width: 100%;
@@ -28,19 +28,14 @@ aside {
 }
 footer {
     @include margin(20 0 0 0);
-    @include padding(10 0);
-    @include font-size(10px);
+    @include padding(10 10);
+    @include font-size(12px);
     color: color('darkergrey');
     background: color('grey');
     display: block;
     width: 100%;
-    .row{
-        text-align: center;
-    }
     @media only screen and (min-width: $breakpoint-tablet-up) {
         @include font-size(11px);
-        .row{
-            text-align: left;
-        }
+        @include padding(10 0);
     }
 }

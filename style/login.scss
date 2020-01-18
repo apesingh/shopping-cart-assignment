@@ -1,95 +1,35 @@
-@import "variables.scss";
-@import "helperClasses.scss";
-.login-wrapper {
+@import "formInput.scss";
+.login {
     @include padding(2 10);
     @media only screen and (min-width: $breakpoint-tablet-up) {
         @include padding(0);
     }
-	.login-details {
+	&__details {
+        @include padding(0 0 0 15);
+        @include margin(50 0 0 0);
+        @include font-size(15px);
         width:50%;
         display: inline-block;
         float: left;
-        @include padding(0 0 0 15);
-        @include margin(50 0 0 0);
 		font-weight: 600;
-        @include font-size(15px);
         @media only screen and (min-width: $breakpoint-tablet-up) {
             @include font-size(18px);
         }
+        .login__details-text {
+            @include margin(14 0 0 0);
+            @include font-size(12.5px);
+            font-weight: 400;
+            line-height: 130%;
+            @media only screen and (min-width: $breakpoint-tablet-up) {
+                @include font-size(14.5px);
+            }
+        }
 	}
-    .login-form {
+    &__form {
 		width:35%;
         display: inline-block;
 	}
-	.login-text {
-        @include margin(14 0 0 0);
-        font-weight: 400;
-        @include font-size(12.5px);
-        line-height: 130%;
-        @media only screen and (min-width: $breakpoint-tablet-up) {
-            @include font-size(14.5px);
-        }
-	}
-	.form-input {
-        @include margin(40 0);
-		width: 100%;
-		label {
-			position: relative;
-			display: block;
-			width: 100%;
-			min-height: $input-height + $input-top;
-		}
-		.placeholder {
-            @include z-index('placeholder');
-			position: absolute;
-			display: block;
-			top: ($input-height / 2) + $placeholder-padding;
-			//z-index: 2;
-			color: color('highlightcolor');
-			font-size: $placeholder-font-size;
-			transition: all $placeholder-transition;
-			width: 100%;
-			cursor: text;
-		}
-		input {
-            @include z-index('input');
-			position: absolute;
-			top: $input-top;
-			//z-index: 1;
-			width: 100%;
-			font-size: $input-font-size;
-			border: 0;
-            @include border-bottom(1px,color('darkgrey'));
-			transition: border-color $placeholder-transition;
-			outline: none;
-            @include padding(0);
-            @include margin(0);
-		}
-		input {
-			height: $input-height;
-		}
-		input:focus,
-		textarea:focus {
-			&+.placeholder {
-				top: 0;
-				cursor: inherit;
-				font-size: $placeholder-font-size-small;
-				color: color('highlightcolor');
-			}
-            @include border-bottom(2px,color('highlightcolor'));
-		}
 
-		input,
-		textarea {
-			&+.placeholder {
-				top: 0;
-				cursor: inherit;
-				font-size: $placeholder-font-size-small;
-				color: color('fontgrey');
-			}
-            @include border-bottom(2px,color('darkergrey'));
-		}
-	}
 	.form-button-large {
 		@extend .button-design;
 		text-align: center;
