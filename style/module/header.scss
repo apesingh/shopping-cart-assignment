@@ -1,4 +1,4 @@
-@import "helperClasses.scss";
+/*------- HEADER--------*/
     .header {
         @include border-bottom(3px, color('grey')); 
         @include padding(3 5 0 5);

@@ -31,6 +31,128 @@
   width: 100%;
   height: auto; }
 
+html {
+  background-color: #FFFFFF;
+  color: #6B6B6B;
+  height: 100%;
+  font-family: 'Dosis', 'Arial', 'sans-serif';
+  font-size: 16px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility; }
+  @media only screen and (min-width: 768px) {
+    html {
+      font-size: 16px; } }
+
+div:focus, a:focus, img:focus, li:focus, form:focus, label:focus, button:focus, input[type=submit]:focus {
+  border: 1px dashed #E67E22 !important; }
+
+button:focus, input[type=submit]:focus {
+  background-color: #960240 !important; }
+
+/* Large devices (laptops/desktops, 961px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*------- MIXIN--------*/
+/*------- EXTEND CLASSES--------*/
+.button-design, .dropdown .dropbtn, .cart__items .item__details .item__name .item__pricing .item__btn, .cart__checkout .btn__checkout, .cart__exception .btn__start, .home__category .category-button, .login .form-button-large, .product__wrapper .article__purchasing .product__buy {
+  background-color: #d10157;
+  color: #FFFFFF;
+  border: 1px solid #d10157;
+  cursor: pointer; }
+
+.float--right {
+  float: right; }
+
+.float--left {
+  float: left; }
+
+.font--white {
+  color: #FFFFFF; }
+
+.width--100 {
+  width: 100%; }
+
+.align--center {
+  text-align: center; }
+
+.align--left {
+  text-align: left; }
+
+.image--width {
+  width: 100%;
+  height: auto; }
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto; }
+  .row:before, .row:after {
+    /* content:""; */
+    display: table; }
+  .row:after {
+    clear: both; }
+
+nav {
+  width: 100%;
+  display: inline-block; }
+
+section {
+  padding: 20px 0px; }
+  @media only screen and (min-width: 768px) {
+    section {
+      padding: 80px 0px; } }
+
+aside {
+  height: 100%;
+  display: inline; }
+
+footer {
+  margin: 20px 0px 0px 0px;
+  padding: 10px 10px;
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #6B6B6B;
+  background: rgba(238, 238, 238, 0.867);
+  display: block;
+  width: 100%; }
+  @media only screen and (min-width: 768px) {
+    footer {
+      font-size: 11px;
+      font-size: 0.6875rem;
+      padding: 10px 0px; } }
+
+/* Large devices (laptops/desktops, 961px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*------- MIXIN--------*/
+/*------- EXTEND CLASSES--------*/
+.button-design, .dropdown .dropbtn, .cart__items .item__details .item__name .item__pricing .item__btn, .cart__checkout .btn__checkout, .cart__exception .btn__start, .home__category .category-button, .login .form-button-large, .product__wrapper .article__purchasing .product__buy {
+  background-color: #d10157;
+  color: #FFFFFF;
+  border: 1px solid #d10157;
+  cursor: pointer; }
+
+.float--right {
+  float: right; }
+
+.float--left {
+  float: left; }
+
+.font--white {
+  color: #FFFFFF; }
+
+.width--100 {
+  width: 100%; }
+
+.align--center {
+  text-align: center; }
+
+.align--left {
+  text-align: left; }
+
+.image--width {
+  width: 100%;
+  height: auto; }
+
 /*------- FORM INPUT--------*/
 .form-input {
   margin: 40px 0px;

@@ -17,7 +17,7 @@ gulp.task('prefix', () =>
     gulp.src([
         'style/*.css'
     ])
-        .pipe(autoprefixer({
+    .pipe(autoprefixer({
             browsers: ['last 99 versions'],
             cascade: false
     }))
@@ -45,6 +45,6 @@ gulp.task('concatCss', () =>
 
 
 //Default task array
-gulp.task("default", gulp.series('styles','prefix','clean','concatCss')); 
+gulp.task("default", gulp.series('styles','prefix')); 
 
  
