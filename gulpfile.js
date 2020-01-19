@@ -3,6 +3,7 @@ concatCss = require('gulp-concat-css'),
 clean = require('gulp-clean'),
 sass = require('gulp-sass');
 
+//SASS into CSS
 gulp.task('styles', function(){
 return gulp.src([
     'style/*.scss'

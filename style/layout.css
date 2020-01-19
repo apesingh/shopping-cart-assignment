@@ -2,13 +2,6 @@
 /* Medium devices (landscape tablets, 768px and up) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*------- MIXIN--------*/
-/*------- EXTEND CLASSES--------*/
-.button-design {
-  background-color: #d10157;
-  color: #FFFFFF;
-  border: 1px solid #d10157;
-  cursor: pointer; }
-
 .float--right {
   float: right; }
 

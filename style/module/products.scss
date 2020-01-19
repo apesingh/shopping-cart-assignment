@@ -119,26 +119,6 @@
                         width: 45%;
                     }
                 }
-                .product__buy{
-                    @extend .button-design;
-                    @include font-size(9px);
-                    @include margin(0 17 0 0);
-                    @include padding(5);
-                    float: right;
-                    width: 60%;
-                    @media only screen and (min-width: $breakpoint-large-device) {
-                        @include padding(10 0 10 0);
-                        @include margin(0 0 0 14);
-                        width: 45%;
-                    }   
-                    .buy__product {
-                        display: inline;
-                        color: color('white');
-                        @media only screen and (min-width: $breakpoint-large-device) {
-                            display: none;
-                        }
-                    }
-                }
             }
         }
     }

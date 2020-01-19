@@ -11,10 +11,10 @@
                 </ul>
             </aside>
             <div class="dropdown">
-                <button class="dropbtn">Dropdown 
+                <button class="btn__dropdown">Dropdown 
                   <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="dropdown-content">
+                <div class="dropdown__content">
                    {{#each categories}}
                         {{#if this.enabled}}
                            <a href="/products/{{this.id}}">{{this.name}}</a>
@@ -32,7 +32,7 @@
                         <div class="article__description" title="{{this.description}}"><p>{{this.description}}</p></div>
                         <div class="article__purchasing">
                             <div class="product__pricing">MRP Rs {{this.price}}</div>
-                            <button class="product__buy" onclick="buy('{{this.id}}', 'add')">Buy now<span class="buy__product">@ {{this.price}}</span></button>                        
+                            <button class="btn__buy" onclick="buy('{{this.id}}', 'add')">Buy now<span class="buy__product">@ {{this.price}}</span></button>                        
                         </div>
                         <div class="mask">
                         </div>

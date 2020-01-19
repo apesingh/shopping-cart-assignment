@@ -7,15 +7,7 @@
     @media only screen and (min-width: $breakpoint-large-device) {
         display: none;
     }
-    .dropbtn {
-        @extend .button-design;
-        @include font-size(18px);
-        @include margin(0);
-        outline: none;
-        width: 100%;
-    }
-
-    .dropdown-content {
+    &__content {
         @include z-index('category-list');
         display: none;
         width: 100%;
@@ -39,8 +31,7 @@
             @include border-bottom(1px, color('orange'));
         }
     }
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
+    &:hover &__content {
+      display: block;
+    }
 }

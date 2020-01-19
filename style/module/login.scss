@@ -29,13 +29,4 @@
 		width:35%;
         display: inline-block;
 	}
-
-	.form-button-large {
-		@extend .button-design;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-        @include padding(10);
-		width: 100%;
-	}
 }

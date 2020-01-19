@@ -1,0 +1,117 @@
+/*-------BUTTONS--------*/
+.btn {
+    background-color: color('buttoncolor');
+    color: color('white');
+    border: 1px solid color('buttoncolor');
+    cursor: pointer;
+}
+
+.btn__form {
+    @extend .btn;
+    @include padding(10);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+
+.btn__checkout {
+    @extend .btn;
+    @include padding(13);
+    @include margin(18 0 0 0);
+    width: 90%;
+    height: 40px;
+    border-radius: 6px;
+}
+
+.btn__start{
+    @extend .btn;
+    @include margin(40 0 40 0);
+    @include padding(13);
+    width: 90%;
+    height: 40px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.btn__prev {
+    cursor: pointer;
+    position: absolute;
+    top: 42%;
+    width: auto;
+    @include padding(5);
+    color:color('white');
+    transition: 0.6s ease;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    border: none;
+    @include font-size(20px);
+    font-weight: 700;
+    @media only screen and (min-width: $breakpoint-tablet-up) {
+        font-weight: 400;
+        @include font-size(20px);
+    }
+}
+
+.btn__next {
+    cursor: pointer;
+    position: absolute;
+    top: 42%;
+    width: auto;
+    @include padding(5);
+    color:color('white');
+    transition: 0.6s ease;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    border: none;
+    @include font-size(20px);
+    font-weight: 700;
+    @media only screen and (min-width: $breakpoint-tablet-up) {
+        font-weight: 400;
+        @include font-size(20px);
+    }
+    & {
+        right: 8px;
+    }
+}
+
+.btn__modify {
+    @extend .btn;
+    @include padding(0);
+    border-radius: 4px;
+    width: 25px;
+}
+
+.btn__category {
+    @extend .btn;
+    @include padding(7);
+    color: color('white');
+}
+
+.btn__buy{
+    @extend .btn;
+    @include font-size(9px);
+    @include margin(0 17 0 0);
+    @include padding(5);
+    float: right;
+    width: 60%;
+    @media only screen and (min-width: $breakpoint-large-device) {
+        @include padding(10 0 10 0);
+        @include margin(0 0 0 14);
+        width: 45%;
+    }   
+    .buy__product {
+        display: inline;
+        color: color('white');
+        @media only screen and (min-width: $breakpoint-large-device) {
+            display: none;
+        }
+    }
+}
+.btn__dropdown {
+    @extend .btn;
+    @include font-size(18px);
+    @include margin(0);
+    outline: none;
+    width: 100%;
+}

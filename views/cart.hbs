@@ -19,12 +19,12 @@
                             <div class="item__name">
                                 <h4>{{name}}</h4>
                                 <div class="item__pricing">
-                                    <button class="btn item__btn"
+                                    <button class="btn btn__modify"
                                         onclick="addRemoveItem('{{id}}', {{@index}},
                                         {{price}},'minus')">-</button>
                                     <input type="text" readonly tabindex="-1" value="{{count}}"
                                         class="item__quantity" id="prod{{@index}}">
-                                    <button class="btn item__btn"
+                                    <button class="btn btn__modify"
                                         onclick="addRemoveItem('{{id}}', {{@index}}, {{price}},'plus')">+</button>
                                     <span class="item--multiply">x</span>
                                     <span class="price">Rs.{{price}}</span>

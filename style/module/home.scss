@@ -26,27 +26,6 @@
             }
         }
     }
-    .prev,.next{
-        cursor: pointer;
-        position: absolute;
-        top: 42%;
-        width: auto;
-        @include padding(5);
-        color:color('white');
-        transition: 0.6s ease;
-        background-color: rgba(0, 0, 0, 0.2);
-        text-transform: uppercase;
-        border: none;
-        @include font-size(20px);
-        font-weight: 700;
-        @media only screen and (min-width: $breakpoint-tablet-up) {
-            font-weight: 400;
-            @include font-size(20px);
-        }
-    }
-    .next{
-        right: 8px;
-    }
     &__category{
          @include margin(20 0 0 0);
         .category {
@@ -113,11 +92,7 @@
         .button-align{
              @include margin(15 0 0 0);
         }
-        .category-button{
-            @extend .button-design;
-            @include padding(7);
-            color: color('white');
-        }
+
         .filter{
             color: color('white');
         }

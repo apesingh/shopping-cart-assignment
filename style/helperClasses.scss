@@ -1,24 +1,5 @@
 @import "mixin.scss";
 
-/*------- EXTEND CLASSES--------*/
-.button-design {
-    background-color: color('buttoncolor');
-    color: color('white');
-    border: 1px solid color('buttoncolor');
-    cursor: pointer;
-}
-
-%clearfix {
-  *zoom: 1;
-  &:before, &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
-
 .float--right{
     float: right;
 }
@@ -42,4 +23,16 @@
 .image--width{
     width: 100%;
     height:auto;
+}
+
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }

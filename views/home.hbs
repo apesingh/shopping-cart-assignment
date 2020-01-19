@@ -9,8 +9,8 @@
                             alt="{{this.bannerImageAlt}}">
                     </div>
                     {{/each}}
-                    <button class="prev" onClick="plusSlides(-1)">prev</button>
-                    <button class="next" id="next" onClick="plusSlides(1)">next</button>
+                    <button class="btn__prev" onClick="plusSlides(-1)">prev</button>
+                    <button class="btn__next" id="next" onClick="plusSlides(1)">next</button>
                     <div class="indexing">
                         {{#each banners}}
                         <span class="indexing__dot" onclick="currentSlide({{@index}})"></span>
@@ -32,7 +32,7 @@
                             <h1 class="category-heading">{{this.name}}</h1>
                             <p class="category-text">{{this.description}}</p>
                             <div class="button-align">
-                                <button class="category-button" onclick="exploreCategory('{{this.id}}')">
+                                <button class="btn__category" onclick="exploreCategory('{{this.id}}')">
                                         Explore {{this.name}}
                                 </button>
                             </div>
