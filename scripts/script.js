@@ -52,17 +52,19 @@
     
     function updateCheckoutAmount() {
         let checkoutAccumulation = document.getElementsByClassName("total");
-        //let totalCheckoutSpan = document.getElementById("totalCheckoutAmount");
+    
         let totalCheckoutPrice = 0;
         for (let i = 0; i < checkoutAccumulation.length; i++) {
             totalCheckoutPrice = totalCheckoutPrice + parseInt(checkoutAccumulation[i].innerHTML);
         }
-        document.getElementById("totalCheckoutAmount").innerHTML = "Rs. "+totalCheckoutPrice;
+        if(document.getElementById("totalCheckoutAmount")){
+            document.getElementById("totalCheckoutAmount").innerHTML = "Rs. "+totalCheckoutPrice;
+        }
     }
     
     if (window.location.pathname === "/cart") {
         request_server();
-        updateCart();
+        //updateCart();
         updateCheckoutAmount();
     }
     
@@ -116,7 +118,7 @@
     function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
+        let dots = document.getElementsByClassName("indexing__dot");
         if (n > slides.length) {
             slideIndex = 1;
         }

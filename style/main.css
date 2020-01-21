@@ -434,13 +434,15 @@ footer {
     font-weight: 400;
     width: 30%;
     float: right;
-    text-align: right; }
+    text-align: right;
+    }
     @media only screen and (min-width: 768px) {
       .header__cart {
         font-size: 12px;
         font-size: 0.75rem;
         margin: 48px 0px 0px 0px;
-        width: 30%; } }
+        width: 30%;
+        } }
     .header__cart a {
       padding: 8px;
       background: rgba(238, 238, 238, 0.867);
