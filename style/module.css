@@ -212,14 +212,15 @@
 .overlay {
   z-index: 300;
   background: #EAEAEA;
-  position: fixed;
   width: 100%;
   max-height: 500px;
-  overflow: auto; }
-  @media only screen and (min-width: 768px) {
+  overflow: auto;
+  position: absolute; }
+  @media only screen and (min-width: 961px) {
     .overlay {
       width: 55%;
-      right: 10%; } }
+      right: 10%;
+      position: fixed; } }
 
 /*------- DROPDOWN--------*/
 .dropdown {

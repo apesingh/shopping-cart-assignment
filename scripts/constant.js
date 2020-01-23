@@ -5,3 +5,9 @@ class CreateConstant {
 }
 
 module.exports = new CreateConstant();
+
+//try {
+//  module.exports = CreateConstant;
+//} catch (error) {
+//  console.log('we caught an error');
+//}
